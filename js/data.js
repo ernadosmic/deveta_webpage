@@ -65,3 +65,6 @@ const schoolData = {
         }
     ]
 };
+
+// Attach schoolData to the window object so it can be accessed by main.js
+window.schoolData = schoolData;
