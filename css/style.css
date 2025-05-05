@@ -124,12 +124,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767px) {
+    .top-info-bar {
+        display: none;
+    }
+    
+    .social-icons a {
+        margin-left: 8px;
+        font-size: 0.9rem;
+    }
+    
     .contact-info span {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
+    
     .contact-info span + span {
         margin-left: 0 !important;
+    }
+    
+    .social-icons {
+        text-align: center;
+        margin-top: 0.3rem;
     }
 }
 
@@ -174,6 +189,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.5px;
     border-radius: 4px;
     transition: all 0.3s ease;
+    white-space: nowrap;  /* Prevent text from wrapping */
 }
 
 .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
@@ -207,6 +223,24 @@ h1, h2, h3, h4, h5, h6 {
     
     .navbar-nav .nav-link {
         text-align: center;
+    }
+    
+    .navbar-toggler {
+        display: block;
+        margin-left: auto;
+        border: 1px solid rgba(0,0,0,0.1);
+        padding: 0.5rem;
+        background-color: transparent;
+    }
+    
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
     }
 }
 
