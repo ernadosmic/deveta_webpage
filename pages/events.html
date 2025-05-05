@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
 
 <head>
     <meta charset="UTF-8">
@@ -15,40 +15,48 @@
 
 <body>
     <!-- Top Info Bar -->
-    <div class="top-info-bar py-2">
-        <div class="container">
+    <div class="top-info-bar py-2 bg-light border-bottom">
+        <div class="container-fluid px-3 px-md-5">
             <div class="row align-items-center">
-                <div class="col-md-6 contact-info">
+                <div class="col-12 col-md-6 contact-info text-center text-md-start mb-2 mb-md-0">
                     <span><i class="fas fa-phone-alt me-2"></i>+387 XX XXX XXX</span>
                     <span class="ms-3"><i class="fas fa-envelope me-2"></i>info@devetaosnovna.ba</span>
                 </div>
-                <div class="col-md-6 text-md-end social-icons">
-                    <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                <div class="col-12 col-md-6 text-center text-md-end social-icons">
+                    <a href="#" class="me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-2" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="me-2" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Main Header -->
-    <header class="main-header py-3">
-        <div class="container">
+    <header class="main-header py-3 bg-white shadow-sm">
+        <div class="container-fluid px-3 px-md-5">
             <div class="row align-items-center">
-                <div class="col-md-4">
-                    <div class="school-logo">
-                        <h1>Deveta osnovna škola</h1>
-                        <p class="mb-0">Maoča</p>
-                    </div>
+                <div class="col-12 col-md-4 col-lg-3 mb-3 mb-md-0">
+                    <a href="../index.html" class="text-decoration-none">
+                        <div
+                            class="school-logo d-flex align-items-center justify-content-center justify-content-md-start">
+                            <img src="../images/logo.png" alt="Logo Deveta osnovna škola" class="me-2"
+                                style="height: 48px; width: auto;">
+                            <div>
+                                <h1 class="fs-5 mb-0 text-dark">Deveta osnovna škola</h1>
+                                <p class="mb-0 small text-muted">Maoča</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-8">
-                    <nav class="navbar navbar-expand-lg">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarMain">
+                <div class="col-12 col-md-8 col-lg-9">
+                    <nav class="navbar navbar-expand-lg p-0">
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false"
+                            aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarMain">
-                            <ul class="navbar-nav ms-auto">
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
+                            <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-2">
                                 <li class="nav-item">
                                     <a class="nav-link" href="../index.html">Početna</a>
                                 </li>
@@ -87,105 +95,14 @@
     <div class="main-content py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    <!-- Event 1 -->
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-3 text-center mb-3 mb-md-0">
-                                    <div class="event-date bg-light rounded p-3">
-                                        <h3 class="mb-0">15</h3>
-                                        <p class="mb-0">Maj 2025.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <h3 class="card-title">Godišnji sportski dan</h3>
-                                    <p><i class="far fa-clock me-2"></i>9:00 - 16:00</p>
-                                    <p><i class="fas fa-map-marker-alt me-2"></i>Školsko sportsko igralište</p>
-                                    <p>Naš godišnji sportski dan će uključivati atletska takmičenja, takmičenja u
-                                        timskim sportovima i posebne nastupe. Svi učenici se potiču da sudjeluju.
-                                        Roditelji su dobrodošli da prisustvuju i navijaju za svoju djecu.</p>
-                                    <p>Molimo da učenici dođu u odgovarajućoj sportskoj odjeći i obući, i donesu
-                                        dovoljno vode za hidrataciju tijekom dana. U slučaju kiše, događaj će biti
-                                        pomaknut na rezervni datum koji će biti naknadno objavljen.</p>
-                                </div>
-                            </div>
+                <!-- Main Content Area - Will be populated by JavaScript -->
+                <div class="col-lg-8" id="all-events">
+                    <!-- Content will be dynamically loaded from data.js -->
+                    <div class="text-center p-5">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
                         </div>
-                    </div>
-
-                    <!-- Event 2 -->
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-3 text-center mb-3 mb-md-0">
-                                    <div class="event-date bg-light rounded p-3">
-                                        <h3 class="mb-0">20</h3>
-                                        <p class="mb-0">Maj 2025.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <h3 class="card-title">Sastanak roditelja i nastavnika</h3>
-                                    <p><i class="far fa-clock me-2"></i>15:00 - 19:00</p>
-                                    <p><i class="fas fa-map-marker-alt me-2"></i>Školske učionice</p>
-                                    <p>Prilika za roditelje da se sastanu s nastavnicima i razgovaraju o akademskom
-                                        napretku svog djeteta. Individualni termini će biti dodijeljeni i komunicirani
-                                        putem e-pošte.</p>
-                                    <p>Molimo roditelje da dođu pripremljeni s pitanjima i temama koje žele raspraviti
-                                        kako bi sastanak bio što produktivniji. Također će biti dostupne i online sesije
-                                        za roditelje koji nisu u mogućnosti fizički prisustvovati.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event 3 -->
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-3 text-center mb-3 mb-md-0">
-                                    <div class="event-date bg-light rounded p-3">
-                                        <h3 class="mb-0">25</h3>
-                                        <p class="mb-0">Maj 2025.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <h3 class="card-title">Naučni sajam</h3>
-                                    <p><i class="far fa-clock me-2"></i>10:00 - 14:00</p>
-                                    <p><i class="fas fa-map-marker-alt me-2"></i>Školska aula</p>
-                                    <p>Učenici će predstaviti svoje naučne projekte i inovacije na našem godišnjem
-                                        naučnom sajmu. Ovaj događaj ima za cilj poticanje naučne znatiželje i
-                                        kreativnosti među našim učenicima.</p>
-                                    <p>Pozivamo roditelje i članove zajednice da dođu i vide ove zanimljive projekte.
-                                        Stručni žiri će ocijeniti projekte, a pobjednici će dobiti vrijedne nagrade i
-                                        mogućnost predstavljanja svojih projekata na regionalnom naučnom takmičenju.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event 4 -->
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-3 text-center mb-3 mb-md-0">
-                                    <div class="event-date bg-light rounded p-3">
-                                        <h3 class="mb-0">10</h3>
-                                        <p class="mb-0">Juni 2025.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <h3 class="card-title">Kulturna priredba talenata</h3>
-                                    <p><i class="far fa-clock me-2"></i>17:00 - 20:00</p>
-                                    <p><i class="fas fa-map-marker-alt me-2"></i>Školska aula</p>
-                                    <p>Učenici će pokazati svoje talente u muzici, plesu, drami i još mnogo toga tijekom
-                                        naše godišnje kulturne priredbe talenata. Ovaj događaj slavi raznolike
-                                        sposobnosti i kreativnost naših učenika.</p>
-                                    <p>Ulaznice će biti dostupne od 1. juna u školskoj administraciji. Sav prihod od
-                                        ulaznica bit će usmjeren u školski fond za kulturne aktivnosti i nabavku novih
-                                        instrumenata za muzičku sekciju.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="mt-3">Učitavanje događaja...</p>
                     </div>
                 </div>
 
@@ -197,66 +114,68 @@
                             <h4>Kalendar događaja</h4>
                             <div class="calendar-widget bg-light p-3 rounded text-center">
                                 <h5>Maj 2025.</h5>
-                                <table class="table table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th>Pon</th>
-                                            <th>Uto</th>
-                                            <th>Sri</th>
-                                            <th>Čet</th>
-                                            <th>Pet</th>
-                                            <th>Sub</th>
-                                            <th>Ned</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>4</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-primary fw-bold">5</td>
-                                            <td>6</td>
-                                            <td>7</td>
-                                            <td>8</td>
-                                            <td>9</td>
-                                            <td>10</td>
-                                            <td>11</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12</td>
-                                            <td>13</td>
-                                            <td>14</td>
-                                            <td class="bg-primary text-white">15</td>
-                                            <td>16</td>
-                                            <td>17</td>
-                                            <td>18</td>
-                                        </tr>
-                                        <tr>
-                                            <td>19</td>
-                                            <td class="bg-primary text-white">20</td>
-                                            <td>21</td>
-                                            <td>22</td>
-                                            <td>23</td>
-                                            <td>24</td>
-                                            <td class="bg-primary text-white">25</td>
-                                        </tr>
-                                        <tr>
-                                            <td>26</td>
-                                            <td>27</td>
-                                            <td>28</td>
-                                            <td>29</td>
-                                            <td>30</td>
-                                            <td>31</td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Pon</th>
+                                                <th>Uto</th>
+                                                <th>Sri</th>
+                                                <th>Čet</th>
+                                                <th>Pet</th>
+                                                <th>Sub</th>
+                                                <th>Ned</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-primary fw-bold">5</td>
+                                                <td>6</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>10</td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td class="bg-primary text-white">15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td class="bg-primary text-white">20</td>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td>30</td>
+                                                <td>31</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <div class="mt-3">
                                 <p><span class="badge bg-primary me-2"></span> Školski događaj</p>
@@ -349,6 +268,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Data JS -->
+    <script src="../js/data.js"></script>
     <!-- Custom JS -->
     <script src="../js/main.js"></script>
 </body>
