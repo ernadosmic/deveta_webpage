@@ -512,6 +512,23 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 0;
 }
 
+.page-banner h2 {
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.page-banner h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
 /* Utility Classes */
 .min-vh-60 {
     min-height: 60vh;
