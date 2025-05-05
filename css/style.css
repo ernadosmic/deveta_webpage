@@ -333,7 +333,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     border-radius: 8px;
     transition: all 0.3s ease;
-    height: 100%;
+    height: auto; /* Changed from 100% to auto to fit content */
 }
 
 .card:hover {
@@ -345,6 +345,16 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--light-color);
     border-bottom: none;
     font-weight: 600;
+}
+
+/* Add specific class for cards that should maintain equal height in a row */
+.equal-height {
+    height: 100%;
+}
+
+/* Adjust the list group items inside cards to be more compact */
+.card .list-group-item {
+    padding: 0.5rem 1rem;
 }
 
 /* Event Styles */
