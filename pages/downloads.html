@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumenti - Deveta osnovna škola - Maoča</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Top Info Bar -->
+    <div class="top-info-bar py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 contact-info">
+                    <span><i class="fas fa-phone-alt me-2"></i>+387 XX XXX XXX</span>
+                    <span class="ms-3"><i class="fas fa-envelope me-2"></i>info@devetaosnovna.ba</span>
+                </div>
+                <div class="col-md-6 text-md-end social-icons">
+                    <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="school-logo">
+                        <h1>Deveta osnovna škola</h1>
+                        <p class="mb-0">Maoča</p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarMain">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarMain">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">Početna</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="news.html">Novosti</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="events.html">Događaji</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="downloads.html">Dokumenti</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">O Nama</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <div class="page-banner bg-primary py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="text-white mb-0">Važni Dokumenti</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Documents Content -->
+    <div class="main-content py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="content-intro mb-4">
+                        <p>Preuzmite važne školske dokumente i obrasce. Svi dokumenti su u PDF formatu osim ako nije
+                            drugačije naznačeno.</p>
+                    </div>
+
+                    <!-- Document Categories -->
+                    <ul class="nav nav-pills mb-4" id="documentsTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="pill"
+                                data-bs-target="#general" type="button" role="tab" aria-controls="general"
+                                aria-selected="true">Opći dokumenti</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="forms-tab" data-bs-toggle="pill" data-bs-target="#forms"
+                                type="button" role="tab" aria-controls="forms" aria-selected="false">Obrasci</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="schedules-tab" data-bs-toggle="pill"
+                                data-bs-target="#schedules" type="button" role="tab" aria-controls="schedules"
+                                aria-selected="false">Rasporedi</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="reports-tab" data-bs-toggle="pill" data-bs-target="#reports"
+                                type="button" role="tab" aria-controls="reports"
+                                aria-selected="false">Izvještaji</button>
+                        </li>
+                    </ul>
+
+                    <!-- Document Lists -->
+                    <div class="tab-content" id="documentsTabContent">
+                        <!-- General Documents -->
+                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                            aria-labelledby="general-tab">
+                            <div class="list-group document-list">
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Akademski kalendar 2025</h5>
+                                        <a href="../documents/academic_calendar_2025.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 1. maj 2025.</p>
+                                    <p class="mb-1">Kompletan akademski kalendar sa svim važnim datumima, praznicima i
+                                        događajima za školsku 2025. godinu.</p>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Priručnik za učenike</h5>
+                                        <a href="../documents/student_handbook.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 15. april 2025.</p>
+                                    <p class="mb-1">Sveobuhvatni vodič koji obuhvaća školske politike, kodeks ponašanja
+                                        i važne informacije za učenike i roditelje.</p>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Smjernice za uniforme</h5>
+                                        <a href="../documents/uniform_guidelines.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 10. februar 2025.</p>
+                                    <p class="mb-1">Kompletne smjernice o školskoj politici uniformi, uključujući
+                                        odobrene stilove i gdje ih kupiti.</p>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Mjesečni jelovnik</h5>
+                                        <a href="../documents/lunch_menu.pdf" class="btn btn-sm btn-primary" download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 1. maj 2025.</p>
+                                    <p class="mb-1">Mjesečni jelovnik s nutritivnim informacijama. Posebne dijetetske
+                                        opcije dostupne su na zahtjev.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Forms -->
+                        <div class="tab-pane fade" id="forms" role="tabpanel" aria-labelledby="forms-tab">
+                            <div class="list-group document-list">
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Obrazac za upis</h5>
+                                        <a href="../documents/enrollment_form.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 20. mart 2025.</p>
+                                    <p class="mb-1">Registracijski obrazac za upis novih učenika. Mora se predati s
+                                        potrebnom dokumentacijom.</p>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Obrazac za dozvolu za izlet</h5>
+                                        <a href="../documents/field_trip_permission.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 15. januar 2025.</p>
+                                    <p class="mb-1">Standardni obrazac za dozvolu potreban za sve školske izlete. Mora
+                                        ga potpisati roditelj ili staratelj.</p>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Prijava za vannastavne aktivnosti</h5>
+                                        <a href="../documents/extracurricular_registration.pdf"
+                                            class="btn btn-sm btn-primary" download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 5. februar 2025.</p>
+                                    <p class="mb-1">Obrazac za prijavu za učešće u vannastavnim aktivnostima. Navedite
+                                        svoje interese i dostupnost.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Schedules -->
+                        <div class="tab-pane fade" id="schedules" role="tabpanel" aria-labelledby="schedules-tab">
+                            <div class="list-group document-list">
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Raspored zvona</h5>
+                                        <a href="../documents/bell_schedule.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 1. april 2025.</p>
+                                    <p class="mb-1">Raspored školskih zvona za svakodnevne nastave i posebne dane.</p>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Raspored ispita</h5>
+                                        <a href="../documents/exam_schedule.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 15. mart 2025.</p>
+                                    <p class="mb-1">Datumi, vremena i lokacije za sve završne ispite u ovom polugodištu.
+                                    </p>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Raspored sportskih aktivnosti</h5>
+                                        <a href="../documents/sports_schedule.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 10. februar 2025.</p>
+                                    <p class="mb-1">Vremena i lokacije svih sportskih takmičenja i treninga za sezonu
+                                        2025.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reports -->
+                        <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
+                            <div class="list-group document-list">
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Godišnji izvještaj škole</h5>
+                                        <a href="../documents/annual_report.pdf" class="btn btn-sm btn-primary"
+                                            download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 30. januar 2025.</p>
+                                    <p class="mb-1">Školski godišnji izvještaj koji pokriva akademska dostignuća,
+                                        finansije i planove za budućnost.</p>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h5 class="mb-1">Izvještaj o kvaliteti obrazovanja</h5>
+                                        <a href="../documents/education_quality_report.pdf"
+                                            class="btn btn-sm btn-primary" download>
+                                            <i class="fas fa-download me-1"></i> Preuzmi
+                                        </a>
+                                    </div>
+                                    <p class="text-muted small mb-1">Ažurirano: 15. februar 2025.</p>
+                                    <p class="mb-1">Izvještaj o kvaliteti obrazovanja i rezultatima učenika za tekuću
+                                        akademsku godinu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon -->
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h4>Uskoro dodajemo</h4>
+                            <p>Sljedeći dokumenti će uskoro biti dostupni za preuzimanje:</p>
+                            <ul>
+                                <li>Popisi ljetnog čitanja (po razredima)</li>
+                                <li>Popisi školskog pribora (po razredima)</li>
+                                <li>Prijava za volonterski rad roditelja</li>
+                                <li>Obrasci za prijavu za sportske programe</li>
+                            </ul>
+
+                            <p>Za pomoć s ovim dokumentima ili za traženje dodatnih materijala, molimo kontaktirajte
+                                školsku kancelariju na <a href="mailto:info@devetaosnovna.ba">info@devetaosnovna.ba</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Search Box -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4>Pretražite dokumente</h4>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Unesite ključne riječi...">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Help -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Pomoć s dokumentima</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Ne možete pronaći dokument koji tražite? Imate problema s preuzimanjem? Kontaktirajte
+                                našu administrativnu kancelariju za pomoć.</p>
+                            <p><i class="fas fa-phone-alt me-2"></i>+387 XX XXX XXX</p>
+                            <p><i class="fas fa-envelope me-2"></i>info@devetaosnovna.ba</p>
+                            <p><i class="fas fa-clock me-2"></i>Radni dani: 8:00 - 16:00</p>
+                            <a href="#" class="btn btn-secondary mt-2">Kontaktirajte nas</a>
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Često postavljana pitanja</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="accordion" id="documentFAQ">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            Kako otvoriti PDF dokument?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#documentFAQ">
+                                        <div class="accordion-body">
+                                            Za otvaranje PDF dokumenta potreban vam je PDF čitač poput Adobe Reader-a,
+                                            koji možete besplatno preuzeti. Većina modernih preglednika također može
+                                            otvoriti PDF datoteke direktno.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Mogu li popuniti obrasce elektronski?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#documentFAQ">
+                                        <div class="accordion-body">
+                                            Da, većina naših obrazaca se može popuniti elektronski koristeći Adobe
+                                            Reader ili sličan program. Nakon popunjavanja, obrazac možete spremiti i
+                                            poslati emailom ili isprintati.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Gdje mogu pronaći starije dokumente?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#documentFAQ">
+                                        <div class="accordion-body">
+                                            Arhiva starijih dokumenata je dostupna na zahtjev od školske administracije.
+                                            Molimo kontaktirajte kancelariju s detaljima dokumenata koji su vam
+                                            potrebni.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4>Deveta osnovna škola</h4>
+                    <p>Maoča, Brčko distrikt BiH</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Adresa: Maoča bb, 76208</p>
+                    <p><i class="fas fa-phone-alt me-2"></i>Telefon: +387 XX XXX XXX</p>
+                    <p><i class="fas fa-envelope me-2"></i>Email: info@devetaosnovna.ba</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4>Linkovi</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Početna</a></li>
+                        <li><a href="news.html">Novosti</a></li>
+                        <li><a href="events.html">Događaji</a></li>
+                        <li><a href="downloads.html">Dokumenti</a></li>
+                        <li><a href="#">O nama</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4>Pratite nas</h4>
+                    <div class="social-icons-footer">
+                        <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0">&copy; 2025 Deveta osnovna škola Brčko distrikta Bosne i Hercegovine. Sva prava
+                            zadržana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

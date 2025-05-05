@@ -1,0 +1,469 @@
+/* Main Styles for Deveta School Website */
+
+/* Main Color Variables */
+:root {
+    --primary-color: #2e5cb8;     /* School primary color - blue */
+    --primary-dark: #1a4185;      /* Darker shade of primary */
+    --primary-light: #5b83d0;     /* Lighter shade of primary */
+    --secondary-color: #f8b739;   /* School secondary color - gold/yellow */
+    --secondary-dark: #e09e1a;    /* Darker shade of secondary */
+    --secondary-light: #ffc850;   /* Lighter shade of secondary */
+    --dark-color: #343a40;        /* Dark text color */
+    --light-color: #f8f9fa;       /* Light background/text color */
+    --gray-color: #6c757d;        /* Gray color for subtle elements */
+    --success-color: #28a745;     /* Success color */
+    --info-color: #17a2b8;        /* Info color */
+    --warning-color: #ffc107;     /* Warning color */
+    --danger-color: #dc3545;      /* Danger color */
+}
+
+/* Override Bootstrap default colors */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+    background-color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+    color: var(--dark-color);
+}
+
+.list-group-item.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+html {
+    overflow-x: hidden; /* Optional: extra safety */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Top Info Bar */
+.top-info-bar {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1030; /* Ensure it stays above the hero image */
+}
+
+.social-icons a {
+    color: var(--light-color);
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+.contact-info span {
+    display: inline-block;
+}
+
+/* Main Header (updated to match crpusd.org style) */
+.main-header {
+    background-color: rgba(0, 0, 0, 0.75); /* Dark transparent background */
+    opacity: 1;
+    box-shadow: none;
+    color: var(--light-color);
+    position: relative;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.school-logo {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.school-logo h1 {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.school-logo p {
+    color: var(--secondary-color); /* Make school location gold for contrast */
+    font-size: 1rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation (updated for crpusd.org style) */
+.navbar-nav {
+    gap: 5px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--light-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    text-shadow: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.navbar-toggler {
+    border: none;
+    color: var(--light-color);
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler i {
+    font-size: 1.5rem;
+}
+
+/* Fix for navbar background */
+.navbar {
+    background-color: transparent !important;
+}
+
+/* Fix for navbar collapse */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+}
+
+/* Hero Section - full viewport width and height */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-section .carousel-inner,
+.hero-section .carousel-item,
+.hero-section img {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-section .carousel-caption {
+    /* ...existing code or keep as is... */
+}
+
+/* Quick Access Links */
+.quick-access {
+    background-color: var(--light-color);
+}
+
+.quick-link {
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.quick-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    color: var(--primary-dark);
+}
+
+.quick-link i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Section Headers */
+.section-header h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: var(--light-color);
+    border-bottom: none;
+    font-weight: 600;
+}
+
+/* Event Styles */
+.event-date {
+    color: var(--primary-color);
+    background-color: var(--light-color);
+}
+
+.event-date h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* Icon Wrappers */
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    color: white;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: var(--light-color);
+}
+
+.testimonials .card {
+    margin-bottom: 1rem;
+}
+
+.testimonials .fa-star {
+    color: var(--secondary-color);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.footer h4 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer h4:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+.social-icons-footer {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icons-footer a:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Document List Styles */
+.document-list .list-group-item {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    padding: 1rem;
+}
+
+.document-list .list-group-item:first-child {
+    border-top-width: 0;
+}
+
+/* Page Banner */
+.page-banner {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+    
+    .navbar-nav .nav-link {
+        color: var(--light-color);
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .school-logo {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .navbar-toggler {
+        margin-left: auto;
+    }
+    
+    .contact-info, .social-icons {
+        text-align: center;
+    }
+    
+    .social-icons {
+        margin-top: 0.5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-right: 0 !important;
+    }
+}
+
+/* Utility Classes */
+.min-vh-60 {
+    min-height: 60vh;
+}
