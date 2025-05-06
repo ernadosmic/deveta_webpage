@@ -2,8 +2,8 @@
 title: Deveta osnovna škola Brčko distrikta Bosne i Hercegovine - Maoča
 email: info@devetaosnovna.ba
 description: Službena stranica Devete osnovne škole Brčko distrikta Bosne i Hercegovine u Maoči.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # Leave empty for Netlify
+url: "https://devetaosnovna.com" # Your production domain
 phone: "+387 49 520-222"
 future: true # Show future-dated posts
 
