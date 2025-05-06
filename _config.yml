@@ -5,6 +5,7 @@ description: Službena stranica Devete osnovne škole Brčko distrikta Bosne i H
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 phone: "+387 49 520-222"
+future: true # Show future-dated posts
 
 # Social media profiles
 social:
