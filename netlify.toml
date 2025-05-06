@@ -1,6 +1,10 @@
 [build]
-  command = "bundle exec jekyll build"
+  command = "chmod +x ./netlify-build.sh && ./netlify-build.sh"
   publish = "_site"
 
 [build.environment]
   RUBY_VERSION = "3.1.0"
+  BUNDLER_VERSION = "2.3.26"
+
+[[plugins]]
+  package = "@netlify/plugin-ruby-bundler"
