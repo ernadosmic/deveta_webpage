@@ -74,3 +74,6 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - netlify.toml
+  - README.md
+  - .github
