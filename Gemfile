@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+# Specify the Ruby version to match Netlify's environment
+ruby "3.1.0"
+
 # Use the latest Jekyll version
 gem "jekyll", "~> 4.3.2"
 
