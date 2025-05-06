@@ -1,0 +1,44 @@
+<!-- Footer -->
+<footer class="footer pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <h4>Deveta osnovna škola</h4>
+                <p>Maoča, Brčko distrikt BiH</p>
+                <p><i class="fas fa-map-marker-alt me-2"></i>Adresa: Maoča bb, 76208</p>
+                <p><i class="fas fa-phone-alt me-2"></i>Telefon: {{ site.phone }}</p>
+                <p><i class="fas fa-envelope me-2"></i>Email: {{ site.email }}</p>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h4>Linkovi</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ '/' | relative_url }}">Početna</a></li>
+                    <li><a href="{{ '/novosti' | relative_url }}">Novosti</a></li>
+                    <li><a href="{{ '/dogadjaji' | relative_url }}">Događaji</a></li>
+                    <li><a href="{{ '/dokumenti' | relative_url }}">Dokumenti</a></li>
+                    <li><a href="{{ '/o-nama' | relative_url }}">O nama</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h4>Pratite nas</h4>
+                <div class="social-icons-footer">
+                    <a href="{{ site.social.facebook }}" aria-label="Facebook"><i
+                            class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="{{ site.social.instagram }}" aria-label="Instagram"><i
+                            class="fab fa-instagram fa-lg"></i></a>
+                    <a href="{{ site.social.youtube }}" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom py-3 mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; {{ site.time | date: '%Y' }} Deveta osnovna škola Brčko distrikta Bosne i
+                        Hercegovine. Sva prava zadržana.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

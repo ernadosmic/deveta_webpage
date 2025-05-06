@@ -1,0 +1,14 @@
+# Jekyll generated files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby environment
+.bundle/
+vendor/
+
+# General
+.DS_Store
+Thumbs.db
+*.log

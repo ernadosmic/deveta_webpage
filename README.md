@@ -1,130 +1,114 @@
-# Deveta School Website
+# Deveta osnovna škola - Maoča Website
 
-A responsive school website designed to showcase school activities, news, and provide document downloads. This website is built with HTML, CSS, and JavaScript and is ready to be hosted on GitHub Pages.
+This repository contains the source code for the Deveta osnovna škola website, built with Jekyll.
 
-## Color Scheme
+## Local Development
 
-The website uses the following color scheme:
-- Primary Color (Navy Blue): #002F6C
-- Secondary Color (Gold): #FFCD00
+### Prerequisites
 
-## Website Structure
+To run this site locally, you'll need:
+
+1. Ruby (version 2.5.0 or higher)
+2. RubyGems
+3. GCC and Make (for Windows users, install via [RubyInstaller](https://rubyinstaller.org/) with DevKit)
+
+### Installation
+
+1. Install Jekyll and Bundler:
+   ```
+   gem install jekyll bundler
+   ```
+
+2. Clone this repository or download the source code
+   
+3. Navigate to the directory:
+   ```
+   cd deveta_webpage
+   ```
+   
+4. Install dependencies:
+   ```
+   bundle install
+   ```
+
+### Running Locally
+
+1. Start the Jekyll development server:
+   ```
+   bundle exec jekyll serve
+   ```
+
+2. Open your browser and visit:
+   ```
+   http://localhost:4000
+   ```
+
+The site will auto-refresh when files are changed.
+
+## File Structure
+
+- `_config.yml`: Jekyll configuration
+- `_layouts/`: HTML layout templates
+- `_includes/`: Reusable HTML components
+- `_posts/`: Blog posts with each post in its own folder
+  - `YYYY-MM-DD-title/`: Individual post folder
+    - `index.md`: Post content in Markdown format
+    - `assets/`: Post-specific images and files
+- `_events/`: Events collection
+- `_downloads/`: Documents collection
+- `assets/`: Global assets
+- `images/`: Global images
+- `css/`: Stylesheets
+- `js/`: JavaScript files
+
+## Adding Content
+
+### Creating a New Post
+
+1. Create a new folder in `_posts/` using the naming convention:
+   ```
+   YYYY-MM-DD-post-title
+   ```
+
+2. Inside this folder, create an `index.md` file with front matter:
+   ```yaml
+   ---
+   layout: post
+   title: "Your Post Title"
+   date: YYYY-MM-DD
+   author: "Author Name"
+   categories: 
+     - category1
+     - category2
+   featured: true/false
+   featured_image: "assets/image.jpg"
+   thumbnail: "assets/thumbnail.jpg"
+   excerpt: "A short description of the post"
+   ---
+
+   Post content goes here...
+   ```
+
+3. Add post-specific images to the `assets/` subfolder within your post folder.
+
+### Creating a New Event
+
+Similar structure to posts, but in the `_events/` collection.
+
+### Adding Documents
+
+Add documents to the `_downloads/` collection, with each document in its own folder with assets.
+
+## Deployment
+
+When ready to deploy, build the site:
 
 ```
-deveta_webpage/
-├── index.html              # Homepage
-├── css/
-│   └── style.css          # Main stylesheet
-├── js/
-│   └── main.js            # JavaScript functionality
-├── pages/
-│   ├── news.html          # School news page
-│   ├── events.html        # Upcoming events page
-│   └── downloads.html     # Document downloads page
-├── documents/             # School documents for download
-└── images/                # Images for the website
+bundle exec jekyll build
 ```
 
-## How to Update the Website
+This will generate the static site in the `_site` directory, which can be deployed to your web server.
 
-### Adding News Items
+## License
 
-To add a new news item:
-1. Open `pages/news.html`
-2. Copy an existing news article element
-3. Update the heading, date, and content
-4. Place newer articles at the top
-
-Example:
-```html
-<article>
-    <h3>Your News Title</h3>
-    <p class="date">May 10, 2025</p>
-    <p>Content of your news article goes here.</p>
-</article>
-```
-
-### Adding Events
-
-To add a new event:
-1. Open `pages/events.html`
-2. Copy an existing event element
-3. Update the title, date, description, location, and time
-4. Add events in chronological order
-
-Example:
-```html
-<div class="event">
-    <h3>Event Title</h3>
-    <p class="date">June 15, 2025</p>
-    <p>Description of the event goes here.</p>
-    <p><strong>Location:</strong> Event Location</p>
-    <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
-</div>
-```
-
-### Adding Documents for Download
-
-To add downloadable documents:
-1. Add your document to the `documents/` folder (preferably in PDF format)
-2. Open `pages/downloads.html`
-3. Add a new list item to the document list
-
-Example:
-```html
-<li>
-    <a href="../documents/your-document-name.pdf">Document Title</a>
-    <span class="date">Updated: May 10, 2025</span>
-    <p>Brief description of the document.</p>
-</li>
-```
-
-### Adding Images
-
-1. Add optimized images to the `images/` folder
-2. Reference images in HTML using relative paths:
-```html
-<img src="images/your-image.jpg" alt="Image description">
-```
-
-## How to Deploy on GitHub Pages
-
-1. Create a new repository on GitHub
-2. Initialize Git in your local project folder:
-   ```
-   git init
-   ```
-3. Add and commit your files:
-   ```
-   git add .
-   git commit -m "Initial commit"
-   ```
-4. Link your local repository to the GitHub repository:
-   ```
-   git remote add origin https://github.com/your-username/your-repository-name.git
-   ```
-5. Push your code to GitHub:
-   ```
-   git push -u origin main
-   ```
-6. In your GitHub repository, go to Settings > Pages
-7. Under "Source", select the branch you want to deploy (main or master)
-8. Click Save, and your website will be published at `https://your-username.github.io/your-repository-name/`
-
-## Updating the Site
-
-After making changes to your website:
-1. Add and commit your changes:
-   ```
-   git add .
-   git commit -m "Description of your changes"
-   ```
-2. Push your changes to GitHub:
-   ```
-   git push origin main
-   ```
-3. GitHub Pages will automatically update your site with the new changes
-
-## Preview Your Website Locally
-
-Double-click on `index.html` to open it in your web browser, or use a local web server for more accurate testing.
+Copyright © 2025 Deveta osnovna škola Brčko distrikta Bosne i Hercegovine. All rights reserved.

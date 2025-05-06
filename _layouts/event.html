@@ -1,0 +1,123 @@
+---
+layout: default
+---
+
+<!-- Page Banner -->
+<div class="page-banner bg-primary py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white mb-0">{{ page.title }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Event Content -->
+<div class="main-content py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <article class="event-detail">
+                    <div class="event-meta mb-4">
+                        <span class="badge bg-primary me-2"><i class="far fa-calendar-alt me-1"></i> {{ page.date |
+                            date: "%d. %B %Y" }}</span>
+                        {% if page.time %}
+                        <span class="badge bg-secondary me-2"><i class="far fa-clock me-1"></i> {{ page.time }}</span>
+                        {% endif %}
+                        {% if page.location %}
+                        <span class="badge bg-info"><i class="fas fa-map-marker-alt me-1"></i> {{ page.location
+                            }}</span>
+                        {% endif %}
+                    </div>
+
+                    {% if page.featured_image %}
+                    <div class="event-image mb-4">
+                        <img src="{{ page.featured_image | relative_url }}" class="img-fluid rounded"
+                            alt="{{ page.title }}">
+                        {% if page.image_caption %}
+                        <p class="small text-muted mt-2">{{ page.image_caption }}</p>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    <div class="event-content">
+                        {{ content }}
+                    </div>
+
+                    <div class="mt-5 pt-4 border-top">
+                        <a href="{{ '/dogadjaji' | relative_url }}" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-left me-2"></i>Nazad na sve događaje
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <!-- Event Details -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Detalji događaja</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3">
+                                <strong><i class="far fa-calendar-alt me-2"></i>Datum:</strong>
+                                <p>{{ page.date | date: "%d. %B %Y" }}</p>
+                            </li>
+                            {% if page.time %}
+                            <li class="mb-3">
+                                <strong><i class="far fa-clock me-2"></i>Vrijeme:</strong>
+                                <p>{{ page.time }}</p>
+                            </li>
+                            {% endif %}
+                            {% if page.location %}
+                            <li class="mb-3">
+                                <strong><i class="fas fa-map-marker-alt me-2"></i>Lokacija:</strong>
+                                <p>{{ page.location }}</p>
+                            </li>
+                            {% endif %}
+                            {% if page.organizer %}
+                            <li class="mb-3">
+                                <strong><i class="fas fa-user me-2"></i>Organizator:</strong>
+                                <p>{{ page.organizer }}</p>
+                            </li>
+                            {% endif %}
+                            {% if page.contact %}
+                            <li>
+                                <strong><i class="fas fa-envelope me-2"></i>Kontakt:</strong>
+                                <p>{{ page.contact }}</p>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Predstojeći događaji</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            {% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" |
+                            sort: "date" | limit: 3 %}
+                            {% for event in upcoming_events %}
+                            {% unless event.url == page.url %}
+                            <a href="{{ event.url | relative_url }}" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">{{ event.title }}</h6>
+                                    <small>{{ event.date | date: "%d.%m" }}</small>
+                                </div>
+                                <small class="text-muted">{{ event.location }}</small>
+                            </a>
+                            {% endunless %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
