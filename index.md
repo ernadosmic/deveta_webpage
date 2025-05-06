@@ -79,7 +79,7 @@ title: Početna
                 <div class="card mb-4">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{ featured_post.featured_image | default: featured_post.thumbnail | relative_url }}" class="img-fluid rounded-start h-100" alt="{{ featured_post.title }}" style="object-fit: cover;">
+                            <img src="{{ featured_post.featured_image | default: featured_post.thumbnail | relative_url }}" class="img-fluid rounded-start" alt="{{ featured_post.title }}" style="object-fit: cover; width: 100%;">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
