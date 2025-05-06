@@ -147,28 +147,7 @@ title: Početna
                 {% include quick-links.html %}
 
                 <!-- School Hours -->
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h5 class="mb-0">Radno vrijeme škole</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2">
-                                <strong>Redovno radno vrijeme:</strong>
-                                <p class="mb-0">Ponedjeljak - Petak: 8:00 - 16:00</p>
-                            </li>
-                            <li class="mb-2">
-                                <strong>Nastava:</strong>
-                                <p class="mb-0">Prijepodnevna smjena: 8:00 - 13:15</p>
-                                <p class="mb-0">Poslijepodnevna smjena: 13:30 - 18:45</p>
-                            </li>
-                            <li>
-                                <strong>Administrativna kancelarija:</strong>
-                                <p class="mb-0">Ponedjeljak - Petak: 8:00 - 15:30</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                {% include school-hours.html %}
 
                 <!-- Announcement -->
                 <div class="card mb-4 bg-light">
