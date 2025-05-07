@@ -2,8 +2,8 @@
 title: Deveta osnovna škola Brčko distrikta Bosne i Hercegovine - Maoča
 email: info@devetaosnovna.ba
 description: Službena stranica Devete osnovne škole Brčko distrikta Bosne i Hercegovine u Maoči.
-baseurl: "" # Leave empty for Netlify
-url: "https://devetaosnovna.com" # Your production domain
+baseurl: "/deveta_webpage" # the subpath of your site, e.g. /blog
+url: "https://ernadosmic.github.io" # Replace with your GitHub Pages URL
 phone: "+387 49 520-222"
 future: true # Show future-dated posts
 
@@ -66,7 +66,7 @@ sass:
   style: compressed
 
 # Include files/folders that Jekyll would otherwise ignore
-include: ['_pages']
+include: ["_pages"]
 
 # Exclude from processing
 exclude:
