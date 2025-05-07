@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# Specify Ruby version to match GitHub Actions environment
-ruby "3.1.6"
+# Specify Ruby version to match local environment
+ruby "3.3.8"
 
 # Use the latest Jekyll version
 gem "jekyll", "~> 4.3.2"
