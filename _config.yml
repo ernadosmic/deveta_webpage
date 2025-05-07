@@ -66,7 +66,10 @@ sass:
   style: compressed
 
 # Include files/folders that Jekyll would otherwise ignore
-include: ["_pages"]
+include:
+  - "_pages"
+  - "assets"
+  - "_site/assets"
 
 # Exclude from processing
 exclude:
