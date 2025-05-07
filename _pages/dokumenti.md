@@ -175,63 +175,11 @@ permalink: /dokumenti/
 
             <!-- Sidebar -->
             <div class="col-lg-4">
-                <!-- Search Box -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h4>Pretražite dokumente</h4>
-                        <form>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Unesite ključne riječi...">
-                                <button class="btn btn-primary" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Categories -->
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h5 class="mb-0">Kategorije dokumenata</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                Školski dokumenti
-                                <span class="badge bg-primary rounded-pill">4</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                Obrasci za roditelje
-                                <span class="badge bg-primary rounded-pill">2</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                Materijali za učenike
-                                <span class="badge bg-primary rounded-pill">2</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                Nastavni planovi
-                                <span class="badge bg-primary rounded-pill">5</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Help Box -->
-                <div class="card mb-4">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Treba vam pomoć?</h5>
-                    </div>
-                    <div class="card-body">
-                        <p>Ako ne možete pronaći dokument koji tražite ili imate problema s preuzimanjem, kontaktirajte nas putem telefona ili email-a.</p>
-                        <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>{{ site.phone }}</p>
-                        <p><i class="fas fa-envelope me-2"></i>{{ site.email }}</p>
-                        <div class="d-grid mt-3">
-                            <a href="{{ '/kontakt' | relative_url }}" class="btn btn-outline-primary">Kontaktirajte nas</a>
-                        </div>
-                    </div>
-                </div>
+                {% include search-box-documents.html %}
+                {% include categories.html %}
+                {% include help-box.html %}
             </div>
         </div>
     </div>
+
 </div>

@@ -52,62 +52,11 @@ permalink: /novosti/
 
             <!-- Sidebar -->
             <div class="col-lg-4">
-                <!-- Search Box -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h4>Pretražite novosti</h4>
-                        <form action="{{ '/pretraga' | relative_url }}" method="get">
-                            <div class="input-group">
-                                <input type="text" name="q" class="form-control" placeholder="Unesite ključne riječi...">
-                                <button class="btn btn-primary" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Categories -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h4>Kategorije</h4>
-                        <ul class="list-group list-group-flush">
-                            {% assign categories = site.posts | map: "categories" | flatten | group_by_exp: "item", "item" | sort: "size" | reverse %}
-                            {% for category in categories %}
-                            {% if category.name != "" %}
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <a href="{{ '/kategorije/' | append: category.name | slugify | relative_url }}" class="text-decoration-none text-dark">
-                                    {{ category.name }}
-                                </a>
-                                <span class="badge bg-primary rounded-pill">{{ category.size }}</span>
-                            </li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h4>Brzi linkovi</h4>
-                        <div class="list-group">
-                            <a href="{{ '/kalendar' | relative_url }}" class="list-group-item list-group-item-action">
-                                <i class="fas fa-calendar-alt me-2"></i>Školski kalendar
-                            </a>
-                            <a href="{{ '/dokumenti' | relative_url }}" class="list-group-item list-group-item-action">
-                                <i class="fas fa-file-download me-2"></i>Preuzimanje dokumenata
-                            </a>
-                            <a href="{{ '/dogadjaji' | relative_url }}" class="list-group-item list-group-item-action">
-                                <i class="fas fa-calendar-check me-2"></i>Predstojeći događaji
-                            </a>
-                            <a href="{{ '/nastavnici' | relative_url }}" class="list-group-item list-group-item-action">
-                                <i class="fas fa-users me-2"></i>Nastavno osoblje
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% include search-box.html %}
+                {% include categories.html %}
+                {% include sidebar-quick-links.html %}
             </div>
         </div>
     </div>
+
 </div>

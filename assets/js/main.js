@@ -79,6 +79,20 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentPage.includes('events')) {
         loadAllEvents();
     }
+
+    // Sticky header functionality
+    const header = document.querySelector('.sticky-header');
+    const topBar = document.querySelector('.top-info-bar');
+
+    if (header && topBar) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > topBar.offsetHeight) {
+                header.classList.add('is-sticky');
+            } else {
+                header.classList.remove('is-sticky');
+            }
+        });
+    }
 });
 
 // Load featured news for homepage

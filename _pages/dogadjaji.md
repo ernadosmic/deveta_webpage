@@ -78,55 +78,11 @@ permalink: /dogadjaji/
 
             <!-- Sidebar -->
             <div class="col-lg-4">
-                <!-- Calendar Download -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h4>Kalendar događaja</h4>
-                        <p>Preuzmite kalendar svih školskih događaja u digitalnom formatu za vaš kalendar aplikaciju.</p>
-                        <div class="d-grid">
-                            <a href="#" class="btn btn-primary">
-                                <i class="fas fa-calendar-alt me-2"></i>Preuzmi kalendar (.ics)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Categories -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h4>Kategorije događaja</h4>
-                        <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                Sportski događaji
-                                <span class="badge bg-primary rounded-pill">3</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                Akademski događaji
-                                <span class="badge bg-primary rounded-pill">5</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                Roditeljski sastanci
-                                <span class="badge bg-primary rounded-pill">2</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                Izleti i ekskurzije
-                                <span class="badge bg-primary rounded-pill">1</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Suggest Event -->
-                <div class="card mb-4">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Predložite događaj</h5>
-                    </div>
-                    <div class="card-body">
-                        <p>Imate ideju za školski događaj? Pošaljite nam vaš prijedlog i možda ga uvrstimo u naš kalendar.</p>
-                        <a href="{{ '/kontakt' | relative_url }}" class="btn btn-outline-primary">Kontaktirajte nas</a>
-                    </div>
-                </div>
+                {% include calendar-download.html %}
+                {% include event-categories.html %}
+                {% include suggest-event.html %}
             </div>
         </div>
     </div>
+
 </div>

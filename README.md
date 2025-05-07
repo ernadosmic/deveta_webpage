@@ -109,6 +109,8 @@ bundle exec jekyll build
 
 This will generate the static site in the `_site` directory, which can be deployed to your web server.
 
+bundle exec jekyll serve
+
 ## License
 
 Copyright © 2025 Deveta osnovna škola Brčko distrikta Bosne i Hercegovine. All rights reserved.

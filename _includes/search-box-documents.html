@@ -1,0 +1,14 @@
+<!-- Search Box -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h4>Pretražite dokumente</h4>
+        <form action="{{ '/pretraga' | relative_url }}" method="get">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Unesite ključne riječi...">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
