@@ -16,12 +16,12 @@ group :jekyll_plugins do
 end
 
 # Cross-platform dependencies
-platforms :x64_mingw32, :ruby do
+platforms :ruby, :mingw, :x64_mingw do
   gem "tzinfo", "~> 2.0"
   gem "tzinfo-data"
 end
 
 # Windows specific
-platforms :x64_mingw32 do
+platforms :mingw, :x64_mingw do
   gem "wdm", ">= 0.1.0"
 end
