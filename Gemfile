@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Specify Ruby version to match local environment
-ruby "3.3.8"
+ruby "2.7.2"
 
 # Use the latest Jekyll version
 gem "jekyll", "~> 4.3.2"
@@ -17,8 +17,6 @@ end
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
-  # Replace wdm with a modern alternative for file watching on Windows
-  gem "eventmachine", ">= 1.2.7", platforms: [:mingw, :x64_mingw, :mswin]
 end
 
 # Performance-booster for watching directories on Windows

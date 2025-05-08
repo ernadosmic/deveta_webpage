@@ -2,7 +2,7 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["ghp-version"]
+    branches: ["netlyfy-version"]
   workflow_dispatch:
 
 permissions:
@@ -20,20 +20,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.8"
-          bundler-cache: false
+          ruby-version: "2.7.2"
+          bundler-cache: true
+
       - name: Install dependencies
         run: bundle install
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
+
       - name: Build with Jekyll
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
