@@ -8,3 +8,4 @@ featured_image: /assets/images/_dsc0379.webp
 ---
 
 S﻿ve je bilo veoma cool
+![Škola tokom ljetnog raspusta](/assets/images/_dsc0379.webp)
