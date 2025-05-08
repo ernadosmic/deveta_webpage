@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 
 # Specify Ruby version to match local environment
-ruby "3.3.8"
+ruby "3.2.2"
 
 # Use the latest Jekyll version
-gem "jekyll", "~> 4.3.2"
+gem "jekyll", "~> 4.3.3"
 
 # Optional: Jekyll plugins
 group :jekyll_plugins do
