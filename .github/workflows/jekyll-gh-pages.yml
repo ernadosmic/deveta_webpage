@@ -25,23 +25,15 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.7.2"
-          bundler-cache: true
-          cache-version: 1
-          working-directory: .
+          bundler-cache: false
 
-      - name: Clear bundler cache
+      - name: Install Bundler
         run: |
-          rm -rf vendor/bundle
-          bundle config --local path vendor/bundle
+          gem install bundler -v "~> 2.4.22"
+          bundle config set --local path 'vendor/bundle'
 
       - name: Install dependencies
-        run: |
-          bundle config set --local deployment 'true'
-          bundle install --jobs 4 --retry 3
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
+        run: bundle install
 
       - name: Build with Jekyll
         run: bundle exec jekyll build
