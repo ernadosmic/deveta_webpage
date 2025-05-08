@@ -15,13 +15,11 @@ group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4"
 end
 
-# Cross-platform dependencies
-platforms :ruby, :mingw, :x64_mingw do
-  gem "tzinfo", "~> 2.0"
-  gem "tzinfo-data"
-end
+# Platform specific dependencies
+gem "tzinfo", "~> 2.0"
+gem "tzinfo-data"
 
 # Windows specific
 platforms :mingw, :x64_mingw do
-  gem "wdm", ">= 0.1.0"
+  gem "wdm", ">= 0.1.0" if Gem.win_platform?
 end
