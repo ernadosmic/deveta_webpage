@@ -1,12 +1,10 @@
 source "https://rubygems.org"
 
-# Specify Ruby version to match local environment
 ruby "2.7.2"
 
-# Core dependencies
+# Jekyll and core dependencies
 gem "jekyll", "~> 4.3.2"
 gem "webrick", "~> 1.8"
-gem "sassc", "2.4.0"
 
 # Jekyll plugins
 group :jekyll_plugins do
@@ -15,9 +13,11 @@ group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4"
 end
 
-# Cross-platform dependencies
-gem "ffi", "1.15.5"
-gem "racc", "1.6.0"
+# Development dependencies
+group :development do
+  gem "ffi", "1.15.5"
+  gem "sassc", "2.4.0"
+end
 
 # Windows platform dependencies
 platforms :mingw, :x64_mingw, :mswin do
