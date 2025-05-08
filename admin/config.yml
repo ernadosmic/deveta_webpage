@@ -6,6 +6,7 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 media_library:
+  name: uploadcare
   max_file_size: 512000 # Optional: limit file size to 500kb
   media_folder: "assets/uploads"
   public_folder: "/assets/uploads"
