@@ -1,12 +1,19 @@
-# Jekyll generated files
+# Jekyll build output
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
-# Ruby environment
+# Ruby & Bundler
+*.gem
 .bundle/
 vendor/
+.ruby-version
+.ruby-gemset
+
+# Environment normalization
+.env
+.env.*
 
 # General
 .DS_Store
