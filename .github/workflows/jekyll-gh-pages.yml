@@ -2,7 +2,7 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["ghp-version"]
+    branches: ["netlyfy-version"]
   workflow_dispatch:
 
 permissions:
