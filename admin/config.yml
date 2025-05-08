@@ -1,20 +1,13 @@
 backend:
   name: git-gateway
-  branch: ghp-version # replace with your actual branch
+  branch: ghp-version
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 media_library:
-  name: uploadcare
-  max_file_size: 512000 # Optional: limit file size to 500kb
-  media_folder: "assets/uploads"
-  public_folder: "/assets/uploads"
-  config:
-    default_transformations:
-      - - width: 1200
-        - format: webp
-        - quality: 82
+  name: netlify-media-library
+  max_file_size: 512000
 
 collections:
   - name: "posts"
@@ -26,7 +19,12 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Uprava škole",
+        }
       - { label: "Categories", name: "categories", widget: "list" }
       - {
           label: "Featured",
@@ -35,6 +33,24 @@ collections:
           default: false,
         }
       - { label: "Featured Image", name: "featured_image", widget: "image" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - {
+          label: "Thumbnail",
+          name: "thumbnail",
+          widget: "hidden",
+          pattern:
+            [
+              "^{{featured_image}}$",
+              "Thumbnail is automatically set to Featured Image",
+            ],
+        }
+      - {
+          label: "Excerpt",
+          name: "excerpt",
+          widget: "hidden",
+          pattern:
+            [
+              "^{{body | strip_html | truncatewords:30}}$",
+              "Excerpt is automatically generated from body",
+            ],
+        }
       - { label: "Body", name: "body", widget: "markdown" }
