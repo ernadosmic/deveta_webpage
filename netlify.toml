@@ -1,7 +1,8 @@
 [build]
-  command = "bundle install && bundle exec jekyll build"
+  command = "bundle exec jekyll build --config _config.yml,_config_netlify.yml"
   publish = "_site"
 
 [build.environment]
   RUBY_VERSION = "2.7.2"
   BUNDLE_FORCE_RUBY_PLATFORM = "true"
+  JEKYLL_ENV = "production"

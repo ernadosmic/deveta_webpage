@@ -1,0 +1,82 @@
+# Site settings
+title: Deveta osnovna škola Brčko distrikta Bosne i Hercegovine - Maoča
+email: info@devetaosnovna.ba
+description: Službena stranica Devete osnovne škole Brčko distrikta Bosne i Hercegovine u Maoči.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ghp-version--deveteaosnovnabrcko.netlify.app/" # Replace with your GitHub Pages URL
+phone: "+387 49 520-222"
+future: true # Show future-dated posts
+
+# Social media profiles
+social:
+  facebook: "#"
+  instagram: "#"
+  youtube: "#"
+
+# Build settings
+markdown: kramdown
+permalink: /novosti/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /novosti/:year/:month/:day/:title/
+  events:
+    output: true
+    permalink: /dogadjaji/:title/
+  downloads:
+    output: true
+    permalink: /dokumenti/:title/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /novosti/:year/:month/:day/:title/
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+      permalink: /dogadjaji/:title/
+  - scope:
+      path: ""
+      type: "downloads"
+    values:
+      layout: "document"
+      permalink: /dokumenti/:title/
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "default"
+
+# Jekyll assets folder structure to maintain
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Include files/folders that Jekyll would otherwise ignore
+include:
+  - "_pages"
+  - "assets"
+  - "_site/assets"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - netlify.toml
+  - README.md
+  - .github
