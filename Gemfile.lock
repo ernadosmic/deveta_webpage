@@ -15,6 +15,7 @@ GEM
     forwardable-extended (2.6.0)
     google-protobuf (3.25.7)
     google-protobuf (3.25.7-x64-mingw32)
+    google-protobuf (3.25.7-x86_64-linux)
     http_parser.rb (0.8.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
@@ -68,6 +69,8 @@ GEM
       rake (>= 13.0.0)
     sass-embedded (1.63.6-x64-mingw32)
       google-protobuf (~> 3.23)
+    sass-embedded (1.63.6-x86_64-linux-gnu)
+      google-protobuf (~> 3.23)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
@@ -85,6 +88,7 @@ GEM
 PLATFORMS
   ruby
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   ffi (= 1.15.5)
@@ -102,4 +106,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.1.4
+   2.3.22

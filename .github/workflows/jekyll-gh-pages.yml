@@ -36,7 +36,6 @@ jobs:
         run: |
           bundle lock --add-platform x86_64-linux
           bundle lock --add-platform ruby
-          bundle lock --remove-platform x86-mingw32 x64-mingw32 x86-mswin32 java
 
       - name: Install dependencies
         run: |
