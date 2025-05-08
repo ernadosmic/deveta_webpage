@@ -4,4 +4,4 @@
 
 [build.environment]
   RUBY_VERSION = "2.7.2"
-  JEKYLL_ENV = "production"
+  BUNDLE_FORCE_RUBY_PLATFORM = "true"
