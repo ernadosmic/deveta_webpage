@@ -25,19 +25,25 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.7.2"
-          bundler-cache: false # Disable automatic cache handling
+          bundler-cache: false
+          rubygems: "3.3.22" # Add specific RubyGems version
+
+      - name: Update system gems
+        run: |
+          gem update --system 3.3.22
+          gem install bundler -v "~> 2.4.22"
 
       - name: Cache Ruby dependencies
         uses: actions/cache@v4
         with:
           path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}-v2
           restore-keys: |
             ${{ runner.os }}-gems-
 
       - name: Install dependencies
         run: |
-          bundle config path vendor/bundle
+          bundle config set --local path 'vendor/bundle'
           bundle install --jobs 4 --retry 3
 
       - name: Build with Jekyll
