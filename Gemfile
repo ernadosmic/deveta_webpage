@@ -6,7 +6,7 @@ ruby "2.7.2"
 gem "jekyll", "~> 4.3.2"
 gem "webrick", "~> 1.8"
 gem "ffi", "1.15.5"
-gem "sassc", "2.4.0"
+gem 'sass-embedded', '< 1.63.6'
 
 # Jekyll plugins
 group :jekyll_plugins do
