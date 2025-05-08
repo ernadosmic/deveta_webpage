@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.7.2"
 
-# Jekyll and core dependencies
+# Core dependencies
 gem "jekyll", "~> 4.3.2"
 gem "webrick", "~> 1.8"
 gem "ffi", "1.15.5"
@@ -15,9 +15,13 @@ group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4"
 end
 
-# Windows platform dependencies
-platforms :mingw, :x64_mingw, :mswin do
+# Cross-platform dependencies
+platforms :x64_mingw32, :ruby do
   gem "tzinfo", "~> 2.0"
   gem "tzinfo-data"
+end
+
+# Windows specific
+platforms :x64_mingw32 do
   gem "wdm", ">= 0.1.0"
 end
