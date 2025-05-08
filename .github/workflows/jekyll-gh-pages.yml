@@ -25,10 +25,20 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.7.2"
-          bundler-cache: true
+          bundler-cache: false # Disable automatic cache handling
+
+      - name: Cache Ruby dependencies
+        uses: actions/cache@v4
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
 
       - name: Install dependencies
-        run: bundle install
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
 
       - name: Build with Jekyll
         run: bundle exec jekyll build
