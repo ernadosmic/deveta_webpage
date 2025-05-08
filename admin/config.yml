@@ -5,6 +5,16 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
+media_library:
+  max_file_size: 512000 # Optional: limit file size to 500kb
+  media_folder: "assets/uploads"
+  public_folder: "/assets/uploads"
+  config:
+    default_transformations:
+      - - width: 1200
+        - format: webp
+        - quality: 82
+
 collections:
   - name: "posts"
     label: "Posts"
@@ -12,6 +22,18 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Categories", name: "categories", widget: "list" }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Featured Image", name: "featured_image", widget: "image" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
