@@ -4,6 +4,6 @@ date: 2025-05-08T15:56:36.673Z
 ---
 D﻿anas je škola 
 
-![](/assets/uploads/layer-1.png)
+![](/assets/uploads/_dsc0379.jpg)
 
  normalno.
