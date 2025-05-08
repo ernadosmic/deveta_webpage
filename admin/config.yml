@@ -5,10 +5,6 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-media_library:
-  name: netlify-media-library
-  max_file_size: 512000
-
 collections:
   - name: "posts"
     label: "Posts"
