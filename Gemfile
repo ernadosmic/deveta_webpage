@@ -5,6 +5,8 @@ ruby "2.7.2"
 # Jekyll and core dependencies
 gem "jekyll", "~> 4.3.2"
 gem "webrick", "~> 1.8"
+gem "ffi", "1.15.5"
+gem "sassc", "2.4.0"
 
 # Jekyll plugins
 group :jekyll_plugins do
@@ -13,15 +15,9 @@ group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4"
 end
 
-# Development dependencies
-group :development do
-  gem "ffi", "1.15.5"
-  gem "sassc", "2.4.0"
-end
-
 # Windows platform dependencies
 platforms :mingw, :x64_mingw, :mswin do
   gem "tzinfo", "~> 2.0"
   gem "tzinfo-data"
-  gem "wdm", ">= 0.1.0" if Gem.win_platform?
+  gem "wdm", ">= 0.1.0"
 end
