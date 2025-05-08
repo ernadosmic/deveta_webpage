@@ -1,13 +1,13 @@
 backend:
   name: git-gateway
-  branch: ghp-version # Or your main Git branch
+  branch: ghp-version # replace with your actual branch
 
-media_folder: "assets/uploads" # Where uploaded files go
+media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "posts"
+    label: "Posts"
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
