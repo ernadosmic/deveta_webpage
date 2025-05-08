@@ -10,4 +10,3 @@ excerpt: "KKKKKK"
 ---
 
 S﻿ve je bilo veoma cool
-![Škola tokom ljetnog raspusta](/assets/images/skola-2.webp)
