@@ -9,9 +9,9 @@ future: true # Show future-dated posts
 
 # Social media profiles
 social:
-  facebook: "#"
+  facebook: "https://www.facebook.com/profile.php?id=61564327001161&sk=about"
   instagram: "#"
-  youtube: "#"
+  youtube: "https://www.youtube.com/@JUDevetaosnovna%C5%A1kolaMao%C4%8Da"
 
 # Build settings
 markdown: kramdown
