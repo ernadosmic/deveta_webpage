@@ -379,7 +379,7 @@ h6 {
 
 .card-body p {
   color: var(--bs-secondary);
-  text-align: center;
+  text-align: left;
   margin-bottom: 0.5rem;
 }
 
@@ -659,4 +659,8 @@ textarea:focus {
 
 .card .social-icons-footer i {
   font-size: 1.5rem;
+}
+
+.mb-0 {
+  text-align: left;
 }
