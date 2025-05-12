@@ -7,23 +7,27 @@
 <!-- Featured News -->
 {% assign featured_post = site.posts | where: "featured", true | sort: "date" | reverse | first %}
 {% if featured_post %}
-<div class="card mb-4">
-    <div class="row g-0">
-        <div class="col-md-4">
-            <img src="{{ featured_post.featured_image | default: featured_post.thumbnail | relative_url }}"
-                class="img-fluid rounded-start" alt="{{ featured_post.title }}" style="object-fit: cover; width: 100%;">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title">{{ featured_post.title }}</h5>
-                <p class="card-text text-muted small"><i class="far fa-calendar-alt me-1"></i> {{ featured_post.date |
-                    date: "%d.%m.%Y" }}</p>
-                <p class="card-text">{{ featured_post.excerpt }}</p>
-                <a href="{{ featured_post.url | relative_url }}" class="btn btn-sm btn-primary">Pročitaj više</a>
+<a href="{{ featured_post.url | relative_url }}" class="card-link" aria-label="Pročitaj: {{ featured_post.title }}">
+    <div class="card mb-4">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ featured_post.featured_image | default: featured_post.thumbnail | relative_url }}"
+                    class="img-fluid rounded-start" alt="{{ featured_post.title }}"
+                    style="object-fit: cover; width: 100%;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ featured_post.title }}</h5>
+                    <p class="card-text text-muted small"><i class="far fa-calendar-alt me-1"></i> {{ featured_post.date
+                        |
+                        date: "%d.%m.%Y" }}</p>
+                    <p class="card-text">{{ featured_post.excerpt }}</p>
+                    <span class="btn btn-sm btn-primary">Pročitaj više</span>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</a>
 {% endif %}
 
 <!-- Latest News -->
@@ -32,15 +36,17 @@
     %}
     {% for post in latest_posts %}
     <div class="col-md-6">
-        <div class="card mb-4">
-            <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text text-muted small"><i class="far fa-calendar-alt me-1"></i> {{ post.date | date:
-                    "%d.%m.%Y" }}</p>
-                <p class="card-text">{{ post.excerpt }}</p>
-                <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-primary">Pročitaj više</a>
+        <a href="{{ post.url | relative_url }}" class="card-link" aria-label="Pročitaj: {{ post.title }}">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text text-muted small"><i class="far fa-calendar-alt me-1"></i> {{ post.date | date:
+                        "%d.%m.%Y" }}</p>
+                    <p class="card-text">{{ post.excerpt }}</p>
+                    <span class="btn btn-sm btn-primary">Pročitaj više</span>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     {% endfor %}
 </div>

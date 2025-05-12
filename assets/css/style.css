@@ -393,6 +393,18 @@ h6 {
   padding: 0.5rem 1rem;
 }
 
+/* Make entire cards clickable */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link:hover .card {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Event Styles */
 .event-date {
   color: var(--primary-color);
