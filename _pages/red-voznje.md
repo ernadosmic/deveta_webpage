@@ -2,6 +2,18 @@
 layout: default
 title: Red vožnje
 permalink: /red-voznje/
+route_stations:
+  - OMERBEGOVACA
+  - Ernad
+  - Krajišnici
+  - Sisic Han
+  - Čađavac 'R'
+  - Dizdaruša Dom
+  - Dizdaruša S.
+  - 4. Juli
+  - Maoča
+start_station: OMERBEGOVACA
+end_station: Maoča
 ---
 
 <!-- Page Banner -->
@@ -24,135 +36,15 @@ permalink: /red-voznje/
                 <p class="text-center">Linija: Omerbegovača - Maoča</p>
             </div>
         </div>
-        
-        <!-- Route Map Visualization -->
+          <!-- Route Map Visualization -->
         <div class="row mb-4">
             <div class="col-12">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-light">
-                        <h4 class="mb-0">Ruta linije</h4>
-                    </div>
-                    <div class="card-body p-3">
-                        <div class="route-map-container">
-                            <div class="route-line"></div>
-                            <div class="stations">
-                                <div class="station start">
-                                    <div class="station-dot"></div>
-                                    <div class="station-name">OMERBEGOVACA</div>
-                                </div>
-                                <div class="station">
-                                    <div class="station-dot"></div>
-                                    <div class="station-name">Krajišnici</div>
-                                </div>
-                                <div class="station">
-                                    <div class="station-dot"></div>
-                                    <div class="station-name">Sisic Han</div>
-                                </div>
-                                <div class="station">
-                                    <div class="station-dot"></div>
-                                    <div class="station-name">Čađavac 'R'</div>
-                                </div>
-                                <div class="station">
-                                    <div class="station-dot"></div>
-                                    <div class="station-name">Dizdaruša Dom</div>
-                                </div>
-                                <div class="station">
-                                    <div class="station-dot"></div>
-                                    <div class="station-name">Dizdaruša S.</div>
-                                </div>
-                                <div class="station">
-                                    <div class="station-dot"></div>
-                                    <div class="station-name">4. Juli</div>
-                                </div>
-                                <div class="station end">
-                                    <div class="station-dot"></div>
-                                    <div class="station-name">Maoča</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <style>
-                            .route-map-container {
-                                position: relative;
-                                padding: 30px 15px;
-                                margin: 20px auto;
-                                max-width: 800px;
-                            }
-                            
-                            .route-line {
-                                position: absolute;
-                                top: 50%;
-                                left: 5%;
-                                width: 90%;
-                                height: 6px;
-                                background-color: #dc3545;
-                                transform: translateY(-50%);
-                                border-radius: 3px;
-                            }
-                            
-                            .stations {
-                                display: flex;
-                                justify-content: space-between;
-                                position: relative;
-                                z-index: 2;
-                            }
-                            
-                            .station {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                width: 90px;
-                            }
-                            
-                            .station-dot {
-                                width: 20px;
-                                height: 20px;
-                                background-color: #0d6efd;
-                                border-radius: 50%;
-                                margin-bottom: 10px;
-                                border: 2px solid #ffffff;
-                                box-shadow: 0 0 0 2px #0d6efd;
-                            }
-                            
-                            .start .station-dot, .end .station-dot {
-                                width: 24px;
-                                height: 24px;
-                                background-color: #198754;
-                            }
-                            
-                            .station-name {
-                                font-size: 12px;
-                                text-align: center;
-                                transform: rotate(-45deg);
-                                margin-top: 8px;
-                                font-weight: 500;
-                            }
-                            
-                            .start .station-name, .end .station-name {
-                                font-weight: bold;
-                            }
-                            
-                            @media (max-width: 768px) {
-                                .stations {
-                                    flex-wrap: wrap;
-                                    justify-content: center;
-                                }
-                                
-                                .station {
-                                    margin: 15px;
-                                }
-                                
-                                .route-line {
-                                    display: none;
-                                }
-                                
-                                .station-name {
-                                    transform: none;
-                                }
-                            }
-                        </style>
-                    </div>
-                </div>
+                {% include route-map.html 
+                    title="Ruta linije" 
+                    stations=page.route_stations 
+                    start_station=page.start_station 
+                    end_station=page.end_station 
+                %}
             </div>
         </div>
         
