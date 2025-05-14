@@ -1,0 +1,97 @@
+{% comment %}
+Bus Timetable Component
+Usage:
+{% include bus-timetable.html
+title="Red vožnje"
+stations=page.route_stations
+start_station=page.start_station
+end_station=page.end_station
+station_times=page.station_times
+%}
+
+Where:
+- stations is an array of station names
+- start_station is the name of the starting station
+- end_station is the name of the ending station
+- station_times is a hash/map where each key is a station name and the value is an array of times
+
+Example in page front matter:
+---
+route_stations:
+- OMERBEGOVACA I
+- Krajiševići
+- Sisić Han
+station_times:
+OMERBEGOVACA I:
+- 06:00
+- 06:30
+- 07:00
+Krajiševići:
+- 06:02
+- 06:32
+- 07:02
+Sisić Han:
+- 06:04
+- 06:34
+- 07:04
+start_station: OMERBEGOVACA I
+end_station: Maoča Centar
+---
+{% endcomment %}
+
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-primary text-white">
+        <div class="d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">{{ include.title | default: "Red vožnje" }}</h4>
+            <span class="badge bg-light text-dark">Autobus</span>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Stanica</th>
+                        <th colspan="18">Vrijeme polaska</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for station in include.stations %}
+                    <tr {% if station==include.end_station %}class="table-warning" {% endif %}>
+                        <td>
+                            {% if station == include.start_station or station == include.end_station %}
+                            <strong>{{ station }}</strong>
+                            {% else %}
+                            {{ station }}
+                            {% endif %}
+                        </td> {% if include.station_times and include.station_times[station] %}
+                        {% for time in include.station_times[station] %}
+                        <td>{% assign time_str = time | append: "" %}{{ time_str }}</td>
+                        {% endfor %}
+                        {% else %}
+                        <td>-</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Objašnjenje</h5>
+                <ul class="list-unstyled">
+                    <li><small><strong>"R"</strong> - stanica na zahtjev</small></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5>Napomene</h5>
+                <ul class="list-unstyled">
+                    <li><small>Red vožnje važi od 01.09.2024.</small></li>
+                    <li><small>Subotom, nedjeljom i praznicima vozi po posebnom redu vožnje.</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
