@@ -3,9 +3,9 @@ layout: default
 title: Red vožnje
 permalink: /red-voznje/
 route_stations:
-  - OMERBEGOVAČA
-  - Krajiševići
-  - Sisić Han
+  - Omerbegovača
+  - Krajnovići
+  - Šišin Han
   - Čađavac "R"
   - Dizdaruša Dom
   - Dizdaruša S.
@@ -14,12 +14,12 @@ route_stations:
   - Vet. Stanica
   - Centar
   - Kolobara
-  - Dom Zdravlja
+  - Dom zdravlja
   - Meraje
   - Izbor
   - Broduša
   - Suljagića Sokak
-  - Sadrvan
+  - Šadrvan
   - Brod Škola
   - Stari Brod
   - Brka Kanal
@@ -35,10 +35,10 @@ route_stations:
   - Prutače
   - Rašljani "R"
   - Maoča Centar
-start_station: OMERBEGOVAČA
+start_station: Omerbegovača
 end_station: Maoča Centar
 station_times:
-  OMERBEGOVAČA:
+  Omerbegovača:
     - "06:00"
     - "06:30"
     - "07:00"
@@ -57,7 +57,7 @@ station_times:
     - "19:00"
     - "19:30"
     - "20:00"
-  Krajiševići:
+  Krajnovići:
     - "06:02"
     - "06:32"
     - "07:02"
@@ -76,7 +76,7 @@ station_times:
     - "19:02"
     - "19:32"
     - "20:02"
-  Sisić Han:
+  Šišin Han:
     - "06:04"
     - "06:34"
     - "07:04"
@@ -152,7 +152,7 @@ station_times:
     - "19:09"
     - "19:39"
     - "20:09"
-  1. Juli:
+  4. Juli:
     - "06:10"
     - "06:40"
     - "07:10"
@@ -247,7 +247,7 @@ station_times:
     - "19:24"
     - "19:54"
     - "20:24"
-  Dom Zdravlja:
+  Dom zdravlja:
     - "06:26"
     - "06:56"
     - "07:26"
@@ -342,7 +342,7 @@ station_times:
     - "19:30"
     - "20:00"
     - "20:30"
-  Sadrvan:
+  Šadrvan:
     - "06:32"
     - "07:02"
     - "07:32"
@@ -662,50 +662,34 @@ station_times:
 <!-- Bus Schedule Section -->
 <section class="py-5">
     <div class="container">
-        <div class="row mb-4">
-            <div class="col-12">
-                <h3 class="text-center mb-4">Red vožnje autobusa</h3>
-                <p class="text-center">Linija: Omerbegovača - Maoča</p>
-            </div>
-        </div>
+
           <!-- Route Map Visualization -->
         <div class="row mb-4">
             <div class="col-12">
-                {% include route-map.html 
-                    title="Ruta linije" 
-                    stations=page.route_stations 
-                    start_station=page.start_station 
-                    end_station=page.end_station 
+                {% include route-map.html
+                    title="Ruta linije"
+                    stations=page.route_stations
+                    start_station=page.start_station
+                    end_station=page.end_station
                 %}
             </div>
         </div>          <div class="row">
             <div class="col-12">
-                {% include bus-timetable.html 
-                    title="Omerbegovača - Maoča" 
-                    stations=page.route_stations 
-                    start_station=page.start_station 
-                    end_station=page.end_station 
+                {% include bus-timetable.html
+                    title="Omerbegovača - Maoča"
+                    stations=page.route_stations
+                    start_station=page.start_station
+                    end_station=page.end_station
                     station_times=page.station_times
                 %}
                   <!-- Schedule change notice -->
                 <div class="alert alert-info">
                     <strong>Važno:</strong> Provjerite aktuelni red vožnje prije putovanja, moguće su izmjene rasporeda.
                 </div>
-                
-                <!-- Bus service information -->
-                <div class="card mt-3">
-                    <div class="card-header bg-light">
-                        <h5 class="mb-0">Informacije o polascima</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Polasci pod brojem 2, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16 i 17 ne saobraćaju subotom, nedjeljom, praznikom i radnim danom za vrijeme školskog raspusta.</li>
-                            <li>Polasci pod brojem 1, 3, 5, 8, 12 i 18 saobraćaju svakodnevno.</li>
-                        </ul>
-                        <p class="small text-muted mt-2 mb-0">Napomena: Brojevi se odnose na redoslijed polazaka u tabeli (kolone).</p>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </div>
+
 </section>

@@ -40,10 +40,75 @@ end_station: Maoča Centar
 {% endcomment %}
 
 <div class="card shadow-sm mb-4">
+    <style>
+        /* Service styles with increased specificity */
+        table tbody tr td.irregular-service,
+        table thead tr th.irregular-service {
+            background-color: #ffe0e0 !important;
+            color: #d32f2f !important;
+        }
+
+        table tbody tr td.regular-service,
+        table thead tr th.regular-service {
+            background-color: #e3f2fd !important;
+            color: #1976d2 !important;
+        }
+
+        th.irregular-service {
+            border-bottom: 2px solid #d32f2f !important;
+        }
+
+        th.regular-service {
+            border-bottom: 2px solid #1976d2 !important;
+        }
+
+        /* Override table striping */
+        .table-striped>tbody>tr:nth-of-type(odd)>td.irregular-service {
+            background-color: #ffe0e0 !important;
+        }
+
+        .table-striped>tbody>tr:nth-of-type(odd)>td.regular-service {
+            background-color: #e3f2fd !important;
+        }
+
+        /* Style for legend dots */
+        .legend-dot {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .regular-dot {
+            color: #1976d2;
+            background-color: #e3f2fd;
+        }
+
+        .irregular-dot {
+            color: #d32f2f;
+            background-color: #ffe0e0;
+        }
+
+        /* Style for R indicator */
+        .station-r {
+            display: inline-block;
+            font-size: 0.75em;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #f57c00;
+            border-radius: 3px;
+            padding: 0px 4px;
+            margin-left: 2px;
+            vertical-align: super;
+        }
+    </style>
     <div class="card-header bg-primary text-white">
         <div class="d-flex justify-content-between align-items-center">
             <h4 class="mb-0">{{ include.title | default: "Red vožnje" }}</h4>
-            <span class="badge bg-light text-dark">Autobus</span>
+            <span class="badge bg-light text-dark">Linija: 8</span>
         </div>
     </div>
     <div class="card-body p-0">
@@ -59,7 +124,14 @@ end_station: Maoča Centar
                         {% assign column_count = 0 %}
                         {% for time in include.station_times[include.start_station] %}
                         {% assign column_count = column_count | plus: 1 %}
-                        <th class="text-center small">{{ column_count }}</th>
+                        {% assign column_string = column_count | string %}
+                        {% if column_count == 2 or column_count == 4 or column_count == 6 or column_count == 7 or
+                        column_count == 9 or column_count == 10 or column_count == 11 or column_count == 13 or
+                        column_count == 14 or column_count == 15 or column_count == 16 or column_count == 17 %}
+                        <th class="text-center small irregular-service">{{ column_count }}</th>
+                        {% else %}
+                        <th class="text-center small regular-service">{{ column_count }}</th>
+                        {% endif %}
                         {% endfor %}
                     </tr>
                 </thead>
@@ -68,13 +140,21 @@ end_station: Maoča Centar
                     <tr {% if station==include.end_station %}class="table-warning" {% endif %}>
                         <td>
                             {% if station == include.start_station or station == include.end_station %}
-                            <strong>{{ station }}</strong>
+                            <strong>{{ station | replace: ' "R"', ' <span class="station-r">R</span>' }}</strong>
                             {% else %}
-                            {{ station }}
+                            {{ station | replace: ' "R"', ' <span class="station-r">R</span>' }}
                             {% endif %}
-                        </td> {% if include.station_times and include.station_times[station] %}
+                        </td>{% if include.station_times and include.station_times[station] %}
+                        {% assign column_count = 0 %}
                         {% for time in include.station_times[station] %}
-                        <td>{% assign time_str = time | append: "" %}{{ time_str }}</td>
+                        {% assign column_count = column_count | plus: 1 %}
+                        {% if column_count == 2 or column_count == 4 or column_count == 6 or column_count == 7 or
+                        column_count == 9 or column_count == 10 or column_count == 11 or column_count == 13 or
+                        column_count == 14 or column_count == 15 or column_count == 16 or column_count == 17 %}
+                        <td class="irregular-service">{% assign time_str = time | append: "" %}{{ time_str }}</td>
+                        {% else %}
+                        <td class="regular-service">{% assign time_str = time | append: "" %}{{ time_str }}</td>
+                        {% endif %}
                         {% endfor %}
                         {% else %}
                         <td>-</td>
@@ -90,14 +170,18 @@ end_station: Maoča Centar
             <div class="col-md-6">
                 <h5>Objašnjenje</h5>
                 <ul class="list-unstyled">
-                    <li><small><strong>"R"</strong> - stanica na zahtjev</small></li>
+                    <li><small><span class="station-r">R</span> <strong>Raskrsnica</strong> - stanica na
+                            raskrsnici</small></li>
+                    <li><small><span class="legend-dot regular-dot">●</span> <strong>Plavo</strong> - polasci
+                            saobraćaju svakodnevno (1, 3, 5, 8, 12 i 18)</small></li>
+                    <li><small><span class="legend-dot irregular-dot">●</span> <strong>Crveno</strong> - ne
+                            saobraćaju vikendom, praznikom i tokom školskog raspusta</small></li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <h5>Napomene</h5>
                 <ul class="list-unstyled">
                     <li><small>Red vožnje važi od 01.09.2024.</small></li>
-                    <li><small>Subotom, nedjeljom i praznicima vozi po posebnom redu vožnje.</small></li>
                 </ul>
             </div>
         </div>

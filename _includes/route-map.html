@@ -35,11 +35,11 @@ end_station: Maoča
         <div class="route-map-container">
             <div class="route-line"></div>
             <div class="stations">
-                {% for station in include.stations %}
-                <div
+                {% for station in include.stations %} <div
                     class="station {% if station == include.start_station %}start{% endif %} {% if station == include.end_station %}end{% endif %}">
                     <div class="station-content">
-                        <div class="station-name">{{ station }}</div>
+                        <div class="station-name">{{ station | replace: ' "R"', ' <span class="station-r">R</span>' }}
+                        </div>
                         <div class="station-dot"></div>
                     </div>
                 </div>
@@ -140,6 +140,19 @@ end_station: Maoča
             .start .station-name,
             .end .station-name {
                 font-weight: bold;
+            }
+
+            /* Style for R indicator */
+            .station-r {
+                display: inline-block;
+                font-size: 0.75em;
+                font-weight: bold;
+                color: #ffffff;
+                background-color: #f57c00;
+                border-radius: 3px;
+                padding: 0px 4px;
+                margin-left: 2px;
+                vertical-align: super;
             }
 
             @media (max-width: 768px) {
