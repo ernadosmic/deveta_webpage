@@ -38,7 +38,6 @@ route_stations:
 start_station: OMERBEGOVAČA
 end_station: Maoča Centar
 station_times:
-station_times:
   OMERBEGOVAČA:
     - "06:00"
     - "06:30"
@@ -153,7 +152,7 @@ station_times:
     - "19:09"
     - "19:39"
     - "20:09"
-  4. Juli:
+  1. Juli:
     - "06:10"
     - "06:40"
     - "07:10"
@@ -688,10 +687,23 @@ station_times:
                     end_station=page.end_station 
                     station_times=page.station_times
                 %}
-                
-                <!-- Schedule change notice -->
+                  <!-- Schedule change notice -->
                 <div class="alert alert-info">
                     <strong>Važno:</strong> Provjerite aktuelni red vožnje prije putovanja, moguće su izmjene rasporeda.
+                </div>
+                
+                <!-- Bus service information -->
+                <div class="card mt-3">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Informacije o polascima</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li>Polasci pod brojem 2, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16 i 17 ne saobraćaju subotom, nedjeljom, praznikom i radnim danom za vrijeme školskog raspusta.</li>
+                            <li>Polasci pod brojem 1, 3, 5, 8, 12 i 18 saobraćaju svakodnevno.</li>
+                        </ul>
+                        <p class="small text-muted mt-2 mb-0">Napomena: Brojevi se odnose na redoslijed polazaka u tabeli (kolone).</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -54,6 +54,14 @@ end_station: Maoča Centar
                         <th>Stanica</th>
                         <th colspan="18">Vrijeme polaska</th>
                     </tr>
+                    <tr>
+                        <th></th>
+                        {% assign column_count = 0 %}
+                        {% for time in include.station_times[include.start_station] %}
+                        {% assign column_count = column_count | plus: 1 %}
+                        <th class="text-center small">{{ column_count }}</th>
+                        {% endfor %}
+                    </tr>
                 </thead>
                 <tbody>
                     {% for station in include.stations %}
