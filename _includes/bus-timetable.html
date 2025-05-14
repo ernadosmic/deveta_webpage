@@ -104,6 +104,36 @@ end_station: Maoča Centar
             margin-left: 2px;
             vertical-align: super;
         }
+
+        /* Sticky first column styles */
+        @media (max-width: 768px) {
+            .table-responsive {
+                position: relative;
+            }
+
+            .sticky-col {
+                position: sticky;
+                left: 0;
+                z-index: 1;
+                background-color: #fff;
+                box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.2);
+            }
+
+            .sticky-col.table-warning {
+                background-color: #fff3cd !important;
+                /* Match Bootstrap's warning color */
+            }
+
+            /* Fix the striping on odd rows */
+            .table-striped>tbody>tr:nth-of-type(odd)>td.sticky-col {
+                background-color: #f2f2f2 !important;
+            }
+
+            .table-striped>tbody>tr:nth-of-type(odd)>td.sticky-col.table-warning {
+                background-color: #ffecb5 !important;
+                /* Slightly darker warning for odd rows */
+            }
+        }
     </style>
     <div class="card-header bg-primary text-white">
         <div class="d-flex justify-content-between align-items-center">
@@ -116,11 +146,11 @@ end_station: Maoča Centar
             <table class="table table-striped table-hover mb-0">
                 <thead class="table-light">
                     <tr>
-                        <th>Stanica</th>
+                        <th class="sticky-col">Stanica</th>
                         <th colspan="18">Vrijeme polaska</th>
                     </tr>
                     <tr>
-                        <th></th>
+                        <th class="sticky-col"></th>
                         {% assign column_count = 0 %}
                         {% for time in include.station_times[include.start_station] %}
                         {% assign column_count = column_count | plus: 1 %}
@@ -136,9 +166,9 @@ end_station: Maoča Centar
                     </tr>
                 </thead>
                 <tbody>
-                    {% for station in include.stations %}
-                    <tr {% if station==include.end_station %}class="table-warning" {% endif %}>
-                        <td>
+                    {% for station in include.stations %} <tr {% if station==include.end_station %}class="table-warning"
+                        {% endif %}>
+                        <td class="sticky-col {% if station==include.end_station %}table-warning{% endif %}">
                             {% if station == include.start_station or station == include.end_station %}
                             <strong>{{ station | replace: ' "R"', ' <span class="station-r">R</span>' }}</strong>
                             {% else %}
