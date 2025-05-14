@@ -27,9 +27,9 @@ end_station: Maoča
 ---
 {% endcomment %}
 
-<div class="card shadow-sm route-map-card d-none d-md-block">
-    <div class="card-header bg-primary text-white">
-        <h4 class="mb-0">{{ include.title | default: "Ruta linije" }}</h4>
+<div class=" ">
+    <div class="">
+        <h5 class="p-ruta">{{ include.title | default: "Ruta linije" }}</h5>
     </div>
     <div class="card-body p-3">
         <div class="route-map-container">
@@ -50,7 +50,7 @@ end_station: Maoča
         <style>
             .route-map-container {
                 position: relative;
-                padding: 80px 15px 30px;
+                padding: 10px 15px 30px;
                 /* More padding at the top for angled text */
                 margin: 20px auto;
                 max-width: 1200px;
@@ -58,7 +58,7 @@ end_station: Maoča
 
             .route-line {
                 position: absolute;
-                top: 180px;
+                top: 110px;
                 /* Fixed position for the line - exactly centered with the dots */
                 left: 2%;
                 width: 95%;
@@ -76,6 +76,11 @@ end_station: Maoča
                 z-index: 2;
                 margin-top: -10px;
                 /* Adjust to position stations correctly */
+            }
+
+            .p-ruta {
+                padding-left: 1rem !important;
+                padding-top: 0.5rem;
             }
 
             .station {

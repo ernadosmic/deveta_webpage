@@ -663,17 +663,7 @@ station_times:
 <section class="py-5">
     <div class="container">
 
-          <!-- Route Map Visualization -->
-        <div class="row mb-4">
-            <div class="col-12">
-                {% include route-map.html
-                    title="Ruta linije"
-                    stations=page.route_stations
-                    start_station=page.start_station
-                    end_station=page.end_station
-                %}
-            </div>
-        </div>          <div class="row">
+        <div class="row">
             <div class="col-12">
                 {% include bus-timetable.html
                     title="Omerbegovača - Maoča"
@@ -682,6 +672,7 @@ station_times:
                     end_station=page.end_station
                     station_times=page.station_times
                 %}
+
                   <!-- Schedule change notice -->
                 <div class="alert alert-info">
                     <strong>Važno:</strong> Provjerite aktuelni red vožnje prije putovanja, moguće su izmjene rasporeda.

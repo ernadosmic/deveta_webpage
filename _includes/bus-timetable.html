@@ -141,6 +141,17 @@ end_station: Maoča Centar
             <span class="badge bg-light text-dark">Linija: 8</span>
         </div>
     </div>
+    <!-- Route Map Visualization -->
+    <div class="row mb-4">
+        <div class="col-12">
+            {% include route-map.html
+            title="Ruta linije"
+            stations=page.route_stations
+            start_station=page.start_station
+            end_station=page.end_station
+            %}
+        </div>
+    </div>
     <div class="card-body p-0">
         <div class="table-responsive">
             <table class="table table-striped table-hover mb-0">
