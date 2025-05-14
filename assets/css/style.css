@@ -85,6 +85,11 @@
   border-color: var(--primary-color);
 }
 
+/* Ensure consistent background color for break times */
+.table-warning {
+  background-color: #fff3cd !important;
+}
+
 /*------------------------------------*\
   #GLOBAL-STYLES
 \*------------------------------------*/
