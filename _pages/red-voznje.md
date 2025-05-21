@@ -39,14 +39,44 @@ permalink: /red-voznje/
         <div class="row mt-5">
             <div class="col-12">
                 <h3 class="mb-4">Maoča - Omerbegovača</h3>
-                {% assign route_data_reverse = site.data.bus_routes.maoca-omerbegovaca %}
-
-                {% include bus-timetable.html
+                {% assign route_data_reverse = site.data.bus_routes.maoca-omerbegovaca %}                {% include bus-timetable.html
                     title=route_data_reverse.title
                     stations=route_data_reverse.route_stations
                     start_station=route_data_reverse.start_station
                     end_station=route_data_reverse.end_station
                     station_times=route_data_reverse.station_times
+                %}
+            </div>
+        </div>        <!-- Maoča-Omerbegovaca Section End -->
+
+        <!-- Rašljani-Potočari -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Rašljani - Potočari</h3>
+                {% assign route_data_rasljani = site.data.bus_routes.rasljani-potocari %}
+
+                {% include bus-timetable.html
+                    title=route_data_rasljani.title
+                    stations=route_data_rasljani.route_stations
+                    start_station=route_data_rasljani.start_station
+                    end_station=route_data_rasljani.end_station
+                    station_times=route_data_rasljani.station_times
+                %}
+            </div>
+        </div>
+        <!-- Rašljani-Potočari Section End -->
+          <!-- Potočari-Rašljani -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Potočari - Rašljani</h3>
+                {% assign route_data_potocari = site.data.bus_routes.potocari-rasljani %}
+
+                {% include bus-timetable.html
+                    title=route_data_potocari.title
+                    stations=route_data_potocari.route_stations
+                    start_station=route_data_potocari.start_station
+                    end_station=route_data_potocari.end_station
+                    station_times=route_data_potocari.station_times
                 %}
 
                 <div class="alert alert-info mt-4">
@@ -54,7 +84,7 @@ permalink: /red-voznje/
                 </div>
             </div>
         </div>
-        <!-- Maoča-Omerbegovaca Section End -->
+        <!-- Potočari-Rašljani Section End -->
     </div>
 
 </section>
