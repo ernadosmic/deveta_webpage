@@ -1,4 +1,9 @@
 title: "Maoča - Omerbegovača"
+line_number: 8
+regular_services: [1, 3, 6, 9, 13, 18]
+irregular_services: [2, 4, 5, 7, 8, 10, 11, 12, 14, 15, 16, 17]
+regular_explanation: "Polasci pod brojem 1, 3, 6, 9, 13 i 18 saobraćaju svakodnevno"
+irregular_explanation: "Polasci pod brojem 2, 4, 5, 7, 8, 10, 11, 12, 14, 15, 16 i 17 ne saobraćaju subotom, nedjeljom, praznikom i radnim danom za vrijeme školskog raspusta"
 route_stations:
   - Maoča Badarka
   - Maoča Centar

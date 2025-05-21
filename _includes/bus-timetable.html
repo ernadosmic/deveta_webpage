@@ -138,20 +138,23 @@ end_station: Maoča Centar
     <div class="card-header bg-primary text-white">
         <div class="d-flex justify-content-between align-items-center">
             <h4 class="mb-0">{{ include.title | default: "Red vožnje" }}</h4>
-            <span class="badge bg-light text-dark">Linija: 8</span>
+            <span class="badge bg-light text-dark">Linija: {{ include.line_number | default: "8" }}</span>
         </div>
     </div>
-    <!-- Route Map Visualization -->
-    <div class="row mb-4">
+
+    <!-- Route Map Visualization - Hidden on smaller screens -->
+    {% if include.stations.size > 0 %}
+    <div class="row mb-4 d-none d-xxl-block">
         <div class="col-12">
             {% include route-map.html
             title="Ruta linije"
-            stations=route_data.route_stations
-            start_station=page.start_station
-            end_station=page.end_station
+            stations=include.stations
+            start_station=include.start_station
+            end_station=include.end_station
             %}
         </div>
     </div>
+    {% endif %}
     <div class="card-body p-0">
         <div class="table-responsive">
             <table class="table table-striped table-hover mb-0">
@@ -161,17 +164,14 @@ end_station: Maoča Centar
                         <th colspan="18">Vrijeme polaska</th>
                     </tr>
                     <tr>
-                        <th class="sticky-col"></th>
-                        {% assign column_count = 0 %}
+                        <th class="sticky-col"></th> {% assign column_count = 0 %}
                         {% for time in include.station_times[include.start_station] %}
                         {% assign column_count = column_count | plus: 1 %}
                         {% assign column_string = column_count | string %}
-                        {% if column_count == 2 or column_count == 4 or column_count == 6 or column_count == 7 or
-                        column_count == 9 or column_count == 10 or column_count == 11 or column_count == 13 or
-                        column_count == 14 or column_count == 15 or column_count == 16 or column_count == 17 %}
-                        <th class="text-center small irregular-service">{{ column_count }}</th>
-                        {% else %}
+                        {% if include.regular_services contains column_count %}
                         <th class="text-center small regular-service">{{ column_count }}</th>
+                        {% else %}
+                        <th class="text-center small irregular-service">{{ column_count }}</th>
                         {% endif %}
                         {% endfor %}
                     </tr>
@@ -185,16 +185,13 @@ end_station: Maoča Centar
                             {% else %}
                             {{ station | replace: ' "R"', ' <span class="station-r">R</span>' }}
                             {% endif %}
-                        </td>{% if include.station_times and include.station_times[station] %}
-                        {% assign column_count = 0 %}
-                        {% for time in include.station_times[station] %}
+                        </td>{% if include.station_times and include.station_times[station] %} {% assign column_count =
+                        0 %} {% for time in include.station_times[station] %}
                         {% assign column_count = column_count | plus: 1 %}
-                        {% if column_count == 2 or column_count == 4 or column_count == 6 or column_count == 7 or
-                        column_count == 9 or column_count == 10 or column_count == 11 or column_count == 13 or
-                        column_count == 14 or column_count == 15 or column_count == 16 or column_count == 17 %}
-                        <td class="irregular-service">{% assign time_str = time | append: "" %}{{ time_str }}</td>
-                        {% else %}
+                        {% if include.regular_services contains column_count %}
                         <td class="regular-service">{% assign time_str = time | append: "" %}{{ time_str }}</td>
+                        {% else %}
+                        <td class="irregular-service">{% assign time_str = time | append: "" %}{{ time_str }}</td>
                         {% endif %}
                         {% endfor %}
                         {% else %}
@@ -213,10 +210,11 @@ end_station: Maoča Centar
                 <ul class="list-unstyled">
                     <li><small><span class="station-r">R</span> <strong>Raskrsnica</strong> - stanica na
                             raskrsnici</small></li>
-                    <li><small><span class="legend-dot regular-dot">●</span> <strong>Plavo</strong> - polasci
-                            saobraćaju svakodnevno (1, 3, 5, 8, 12 i 18)</small></li>
-                    <li><small><span class="legend-dot irregular-dot">●</span> <strong>Crveno</strong> - ne
-                            saobraćaju vikendom, praznikom i tokom školskog raspusta</small></li>
+                    <li><small><span class="legend-dot regular-dot">●</span> <strong>Plavo</strong> - {{
+                            include.regular_explanation | default: "Polasci saobraćaju svakodnevno" }}</small></li>
+                    <li><small><span class="legend-dot irregular-dot">●</span> <strong>Crveno</strong> - {{
+                            include.irregular_explanation | default: "Ne saobraćaju vikendom, praznikom i tokom školskog
+                            raspusta" }}</small></li>
                 </ul>
             </div>
             <div class="col-md-6">

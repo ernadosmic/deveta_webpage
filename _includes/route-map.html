@@ -160,21 +160,22 @@ end_station: Maoča
                 vertical-align: super;
             }
 
-            @media (max-width: 868px) {
+            @media (max-width: 1399px) {
                 .route-map-container {
                     padding: 10px 4px;
-                    display: none;
+                    overflow-x: auto;
                 }
 
                 .stations {
-                    flex-wrap: wrap;
-                    justify-content: center;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
                     margin-top: 0;
+                    min-width: max-content;
                 }
 
                 .station {
                     margin: 20px 10px;
-                    height: auto;
+                    min-width: 80px;
                 }
 
                 .station-content {
@@ -182,20 +183,26 @@ end_station: Maoča
                 }
 
                 .route-line {
-                    display: none;
+                    top: 110px;
+                    width: 100%;
                 }
 
                 .station-dot {
-                    position: static;
+                    position: relative;
+                    margin-top: 25px;
+                    top: auto;
+                    left: auto;
                     transform: none;
-                    margin-top: 5px;
                 }
 
                 .station-name {
-                    position: static;
+                    position: relative;
                     transform: none;
                     text-align: center;
                     width: 100%;
+                    font-size: 10px;
+                    top: auto;
+                    left: auto;
                     margin-bottom: 8px;
                 }
 

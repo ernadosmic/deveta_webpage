@@ -1,4 +1,9 @@
 title: "Rašljani - Potočari"
+line_number: 9
+regular_services: [1]
+irregular_services: [2, 3]
+regular_explanation: "Polasci pod brojem 1 saobraćaju svakodnevno"
+irregular_explanation: "Polasci pod brojem 2 i 3 ne saobraćaju subotom, nedjeljom, praznikom i radnim danom za vrijeme školskog raspusta"
 route_stations:
   - RAŠLJANI
   - Rašljani Škola
