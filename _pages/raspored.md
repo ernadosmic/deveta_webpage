@@ -67,9 +67,10 @@ permalink: /raspored/
                                     <td>6. čas</td>
                                     <td>11:40 – 12:25</td>
                                 </tr>
-                            </tbody>                        </table>
+                            </tbody>
+                        </table>
 
-                        <h5 class="mt-4">Popodnevna smjena:</h5>
+                        <h5 class="mt-4">Druga smjena (popodnevna):</h5>
                         <table class="table table-striped table-bordered">
                             <thead class="table-light">
                                 <tr>
