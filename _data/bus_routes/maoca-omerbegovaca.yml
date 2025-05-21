@@ -1,42 +1,42 @@
-title: "Omerbegovača - Maoča"
+title: "Maoča - Omerbegovača"
 route_stations:
-  - Omerbegovača
-  - Krajnovići
-  - Šišin Han
-  - Čađavac "R"
-  - Dizdaruša Dom
-  - Dizdaruša S.
-  - 4. Juli
-  - Staklorad
-  - Vet. Stanica
-  - Centar
-  - Kolobara
-  - Dom zdravlja
-  - Meraje
-  - Izbor
-  - Broduša
-  - Suljagića Sokak
-  - Šadrvan
-  - Brod Škola
-  - Stari Brod
-  - Brka Kanal
-  - Tihe Noći
-  - Brka Servis
-  - Brka Bor
-  - Mušići
-  - Palanka "R"
-  - Ograđenovac
-  - Rahić Škola
-  - Rahić Centar
-  - Šljunkara
-  - Prutače
-  - Rašljani "R" (Škola Maoča)
-  - Maoča Centar
   - Maoča Badarka
-start_station: Omerbegovača
-end_station: Maoča Badarka
+  - Maoča Centar
+  - Rašljani "R" (Škola Maoča)
+  - Prutače
+  - Šljunkara
+  - Rahić Centar
+  - Rahić Škola
+  - Ograđenovac
+  - Palanka "R"
+  - Mušići
+  - Brka Bor
+  - Brka Servis
+  - Tihe Noći
+  - Brka Kanal
+  - Stari Brod
+  - Brod Škola
+  - Šadrvan
+  - Suljagića Sokak
+  - Broduša
+  - Izbor
+  - Meraje
+  - Dom zdravlja
+  - Kolobara
+  - Centar
+  - Vet. Stanica
+  - Staklorad
+  - 4. Juli
+  - Dizdaruša S.
+  - Dizdaruša Dom
+  - Čađavac "R"
+  - Šišin Han
+  - Krajnovići
+  - Omerbegovača
+start_station: Maoča Badarka
+end_station: Omerbegovača
 station_times:
-  Omerbegovača:
+  Maoča Badarka:
     - "06:00"
     - "06:30"
     - "07:00"
@@ -55,7 +55,7 @@ station_times:
     - "18:00"
     - "19:00"
     - "20:00"
-  Krajnovići:
+  Maoča Centar:
     - "06:01"
     - "06:31"
     - "07:01"
@@ -74,7 +74,7 @@ station_times:
     - "18:01"
     - "19:01"
     - "20:01"
-  Šišin Han:
+  Rašljani "R" (Škola Maoča):
     - "06:02"
     - "06:32"
     - "07:02"
@@ -93,7 +93,7 @@ station_times:
     - "18:02"
     - "19:02"
     - "20:02"
-  Čađavac "R":
+  Prutače:
     - "06:03"
     - "06:33"
     - "07:03"
@@ -112,7 +112,7 @@ station_times:
     - "18:03"
     - "19:03"
     - "20:03"
-  Dizdaruša Dom:
+  Šljunkara:
     - "06:04"
     - "06:34"
     - "07:04"
@@ -131,7 +131,7 @@ station_times:
     - "18:04"
     - "19:04"
     - "20:04"
-  Dizdaruša S.:
+  Rahić Centar:
     - "06:06"
     - "06:36"
     - "07:06"
@@ -150,7 +150,7 @@ station_times:
     - "18:06"
     - "19:06"
     - "20:06"
-  4. Juli:
+  Rahić Škola:
     - "06:08"
     - "06:38"
     - "07:08"
@@ -169,7 +169,7 @@ station_times:
     - "18:08"
     - "19:08"
     - "20:08"
-  Staklorad:
+  Ograđenovac:
     - "06:10"
     - "06:40"
     - "07:10"
@@ -188,7 +188,7 @@ station_times:
     - "18:10"
     - "19:10"
     - "20:10"
-  Vet. Stanica:
+  Palanka "R":
     - "06:11"
     - "06:41"
     - "07:11"
@@ -207,7 +207,7 @@ station_times:
     - "18:11"
     - "19:11"
     - "20:11"
-  Centar:
+  Mušići:
     - "06:12"
     - "06:42"
     - "07:12"
@@ -226,7 +226,7 @@ station_times:
     - "18:12"
     - "19:12"
     - "20:12"
-  Kolobara:
+  Brka Bor:
     - "06:13"
     - "06:43"
     - "07:13"
@@ -245,7 +245,7 @@ station_times:
     - "18:13"
     - "19:13"
     - "20:13"
-  Dom zdravlja:
+  Brka Servis:
     - "06:14"
     - "06:44"
     - "07:14"
@@ -264,7 +264,7 @@ station_times:
     - "18:14"
     - "19:14"
     - "20:14"
-  Meraje:
+  Tihe Noći:
     - "06:16"
     - "06:46"
     - "07:16"
@@ -283,7 +283,7 @@ station_times:
     - "18:16"
     - "19:16"
     - "20:16"
-  Izbor:
+  Brka Kanal:
     - "06:17"
     - "06:47"
     - "07:17"
@@ -302,7 +302,7 @@ station_times:
     - "18:17"
     - "19:17"
     - "20:17"
-  Broduša:
+  Stari Brod:
     - "06:18"
     - "06:48"
     - "07:18"
@@ -321,7 +321,7 @@ station_times:
     - "18:18"
     - "19:18"
     - "20:18"
-  Suljagića Sokak:
+  Brod Škola:
     - "06:19"
     - "06:49"
     - "07:19"
@@ -359,7 +359,7 @@ station_times:
     - "18:20"
     - "19:20"
     - "20:20"
-  Brod Škola:
+  Suljagića Sokak:
     - "06:24"
     - "06:54"
     - "07:24"
@@ -378,7 +378,7 @@ station_times:
     - "18:24"
     - "19:24"
     - "20:24"
-  Stari Brod:
+  Broduša:
     - "06:25"
     - "06:55"
     - "07:25"
@@ -397,7 +397,7 @@ station_times:
     - "18:25"
     - "19:25"
     - "20:25"
-  Brka Kanal:
+  Izbor:
     - "06:26"
     - "06:56"
     - "07:26"
@@ -416,7 +416,7 @@ station_times:
     - "18:26"
     - "19:26"
     - "20:26"
-  Tihe Noći:
+  Meraje:
     - "06:27"
     - "06:57"
     - "07:27"
@@ -435,7 +435,7 @@ station_times:
     - "18:27"
     - "19:27"
     - "20:27"
-  Brka Servis:
+  Dom zdravlja:
     - "06:28"
     - "06:58"
     - "07:28"
@@ -454,7 +454,7 @@ station_times:
     - "18:28"
     - "19:28"
     - "20:28"
-  Brka Bor:
+  Kolobara:
     - "06:30"
     - "07:00"
     - "07:30"
@@ -473,7 +473,7 @@ station_times:
     - "18:30"
     - "19:30"
     - "20:30"
-  Mušići:
+  Centar:
     - "06:32"
     - "07:02"
     - "07:32"
@@ -492,7 +492,7 @@ station_times:
     - "18:32"
     - "19:32"
     - "20:32"
-  Palanka "R":
+  Vet. Stanica:
     - "06:36"
     - "07:06"
     - "07:36"
@@ -511,7 +511,7 @@ station_times:
     - "18:36"
     - "19:36"
     - "20:36"
-  Ograđenovac:
+  Staklorad:
     - "06:40"
     - "07:10"
     - "07:40"
@@ -530,7 +530,7 @@ station_times:
     - "18:40"
     - "19:40"
     - "20:40"
-  Rahić Škola:
+  4. Juli:
     - "06:44"
     - "07:14"
     - "07:44"
@@ -549,7 +549,7 @@ station_times:
     - "18:44"
     - "19:44"
     - "20:44"
-  Rahić Centar:
+  Dizdaruša S.:
     - "06:45"
     - "07:15"
     - "07:45"
@@ -568,7 +568,7 @@ station_times:
     - "18:45"
     - "19:45"
     - "20:45"
-  Šljunkara:
+  Dizdaruša Dom:
     - "06:46"
     - "07:16"
     - "07:46"
@@ -587,7 +587,7 @@ station_times:
     - "18:46"
     - "19:46"
     - "20:46"
-  Prutače:
+  Čađavac "R":
     - "06:48"
     - "07:18"
     - "07:48"
@@ -606,7 +606,7 @@ station_times:
     - "18:48"
     - "19:48"
     - "20:48"
-  'Rašljani "R" (Škola Maoča)':
+  Šišin Han:
     - "06:50"
     - "07:20"
     - "07:50"
@@ -625,7 +625,7 @@ station_times:
     - "18:50"
     - "19:50"
     - "20:50"
-  Maoča Centar:
+  Krajnovići:
     - "06:52"
     - "07:22"
     - "07:52"
@@ -644,7 +644,7 @@ station_times:
     - "18:52"
     - "19:52"
     - "20:52"
-  "Maoča Badarka":
+  Omerbegovača:
     - "06:54"
     - "07:24"
     - "07:54"
