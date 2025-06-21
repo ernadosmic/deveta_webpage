@@ -5,6 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const footerYear = document.querySelector('.footer-bottom p');
     const currentYear = new Date().getFullYear();
 
+    // Prepare stylesheet for dynamic styles
+    const styleSheet = document.createElement('style');
+    document.head.appendChild(styleSheet);
+
+    const nextDepartureStyle = `
+        .time-cell.next-departure {
+            background-color: #ff6b35 !important;
+            color: white !important;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+        }
+    `;
+
+    styleSheet.textContent += nextDepartureStyle;
+
     if (footerYear) {
         footerYear.innerHTML = footerYear.innerHTML.replace('2025', currentYear);
     }
@@ -93,6 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Highlight the next departure if timetable exists
+    getCurrentTimeHighlight();
+    setInterval(getCurrentTimeHighlight, 60000);
 });
 
 // Load featured news for homepage
@@ -390,6 +414,41 @@ function loadAllEvents() {
 function formatDate(dateString) {
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     return new Date(dateString).toLocaleDateString('bs', options);
+}
+
+// Highlight the next upcoming time in schedules
+function getCurrentTimeHighlight() {
+    const now = new Date();
+    const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+    const timeCells = document.querySelectorAll('.time-cell');
+    let nextDeparture = null;
+    let minDiff = Infinity;
+
+    timeCells.forEach(cell => {
+        const cellTime = cell.textContent.trim();
+        const [cellHours, cellMinutes] = cellTime.split(':').map(Number);
+        const [currentHours, currentMinutes] = currentTime.split(':').map(Number);
+
+        const cellTotalMinutes = cellHours * 60 + cellMinutes;
+        const currentTotalMinutes = currentHours * 60 + currentMinutes;
+
+        let diff = cellTotalMinutes - currentTotalMinutes;
+        if (diff < 0) diff += 24 * 60;
+
+        if (diff < minDiff && diff > 0) {
+            minDiff = diff;
+            nextDeparture = cell;
+        }
+    });
+
+    if (nextDeparture) {
+        document.querySelectorAll('.time-cell.next-departure').forEach(cell => {
+            cell.classList.remove('next-departure');
+        });
+
+        nextDeparture.classList.add('next-departure');
+    }
 }
 
 window.addEventListener('scroll', function () {

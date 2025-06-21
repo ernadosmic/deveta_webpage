@@ -660,3 +660,22 @@ textarea:focus {
 .card .social-icons-footer i {
   font-size: 1.5rem;
 }
+
+/* Highlight next departure in timetables */
+.time-cell.next-departure {
+  background-color: #ff6b35 !important;
+  color: #ffffff !important;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+  }
+}
