@@ -58,7 +58,7 @@ permalink: /o-nama/
                         <div class="card h-100 text-center">
                             <div class="card-body">
                                 <i class="fas fa-user-graduate fa-3x text-primary mb-3"></i>
-                                <h5>450+</h5>
+                                <h5>200+</h5>
                                 <p class="mb-0">Učenika</p>
                             </div>
                         </div>
@@ -95,14 +95,14 @@ permalink: /o-nama/
                         <p><i class="fas fa-map-marker-alt me-2"></i>Adresa: Maoča bb, 76208 Maoča</p>
                         <p><i class="fas fa-phone-alt me-2"></i>Telefon: {{ site.phone }}</p>
                         <p><i class="fas fa-envelope me-2"></i>Email: {{ site.email }}</p>
-                        <p><i class="fas fa-clock me-2"></i>Radno vrijeme: Ponedjeljak - Petak 8:00 - 16:00</p>
-                        
+                        <p><i class="fas fa-clock me-2"></i>Radno vrijeme: Ponedjeljak - Petak 7:30 - 15:30</p>
+
                         <div class="d-grid mt-3">
                             <a href="{{ '/kontakt' | relative_url }}" class="btn btn-primary">Kontaktirajte nas</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- School Leadership -->
                 <div class="card mb-4">
                     <div class="card-header">
@@ -116,8 +116,8 @@ permalink: /o-nama/
                                 </div>
                             </div>
                             <div>
-                                <h6 class="mb-0">Amina Hodžić</h6>
-                                <p class="small text-muted mb-0">Direktorica</p>
+                                <h6 class="mb-0">Almir Bećić</h6>
+                                <p class="small text-muted mb-0">Direktor</p>
                             </div>
                         </div>
                         <div class="d-flex mb-3">
@@ -127,7 +127,7 @@ permalink: /o-nama/
                                 </div>
                             </div>
                             <div>
-                                <h6 class="mb-0">Emir Karić</h6>
+                                <h6 class="mb-0">Ernad Osmić</h6>
                                 <p class="small text-muted mb-0">Pomoćnik direktora</p>
                             </div>
                         </div>
@@ -138,13 +138,13 @@ permalink: /o-nama/
                                 </div>
                             </div>
                             <div>
-                                <h6 class="mb-0">Selma Burić</h6>
+                                <h6 class="mb-0">Eldin Zahirović</h6>
                                 <p class="small text-muted mb-0">Pedagog</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Downloads -->
                 <div class="card mb-4">
                     <div class="card-header">
@@ -173,4 +173,5 @@ permalink: /o-nama/
             </div>
         </div>
     </div>
+
 </div>
