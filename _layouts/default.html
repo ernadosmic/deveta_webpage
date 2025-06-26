@@ -47,7 +47,35 @@
     <script src="{{ js_file | relative_url }}"></script>
     {% endfor %}
     {% endif %}
+    <div id="imgModal" class="img-modal" tabindex="-1" style="display:none;">
+        <span class="img-modal-close" id="imgModalClose">&times;</span>
+        <img class="img-modal-content" id="imgModalImg" alt="">
+    </div>
+    <script>
+        // Open modal on image click
+        document.querySelectorAll('.history-img-zoom img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function () {
+                var modal = document.getElementById('imgModal');
+                var modalImg = document.getElementById('imgModalImg');
+                modal.style.display = 'flex';
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+                modal.focus();
+            });
+        });
 
+        // Close modal on X or background click
+        document.getElementById('imgModalClose').onclick = function () {
+            document.getElementById('imgModal').style.display = 'none';
+        };
+        document.getElementById('imgModal').onclick = function (e) {
+            if (e.target === this) this.style.display = 'none';
+        };
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') document.getElementById('imgModal').style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>

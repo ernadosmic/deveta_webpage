@@ -624,7 +624,7 @@ h6 {
   }
   .floating-label {
     animation: floatY 3s ease-in-out infinite;
-    max-width: 15rem !important;
+    max-width: 12rem !important;
   }
 
   .hero-subtitle {
@@ -733,12 +733,47 @@ textarea:focus {
 
 .history-img-zoom:hover img,
 .history-img-zoom:focus-within img {
-  transform: scale(1.13);
+  transform: scale(2);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
-  position: absolute;
-  top: -20px;
-  left: -20px;
+
   z-index: 10;
   background: #fff;
   border-radius: 1rem;
+}
+
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 20000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.img-modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 1rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+.img-modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 20001;
+  text-shadow: 0 2px 8px #000;
+}
+.img-modal:focus {
+  outline: none;
 }
