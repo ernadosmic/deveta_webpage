@@ -6,6 +6,7 @@
   --primary-color: #2e5cb8;
   --primary-dark: #1a4185;
   --primary-light: #5b83d0;
+  --primary-light-light: #d0d9f5;
   --secondary-color: #f8b739;
   --secondary-dark: #e09e1a;
   --secondary-light: #ffc850;
@@ -621,6 +622,10 @@ h6 {
   .hero-title {
     font-size: 1.8rem;
   }
+  .floating-label {
+    animation: floatY 3s ease-in-out infinite;
+    max-width: 15rem !important;
+  }
 
   .hero-subtitle {
     font-size: 1rem;
@@ -680,4 +685,60 @@ textarea:focus {
 
 .mb-0 {
   text-align: left;
+}
+
+.card-body h3 {
+  background-color: var(--primary-light-light);
+}
+
+/* Add to your main CSS file or inside a <style> tag */
+.floating-label {
+  animation: floatY 3s ease-in-out infinite;
+  max-width: 30vw;
+  bottom: -0.2vw;
+  right: 0;
+  position: relative;
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.label-cont {
+  z-index: 10;
+
+  padding: 0;
+}
+
+.history-img-zoom {
+  overflow: visible; /* Allow image to overflow the container */
+  position: relative;
+  border-radius: 0.75rem;
+  transition: box-shadow 0.3s;
+}
+
+.history-img-zoom img {
+  transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.3s,
+    z-index 0.3s;
+  will-change: transform;
+  position: relative;
+  z-index: 1;
+}
+
+.history-img-zoom:hover img,
+.history-img-zoom:focus-within img {
+  transform: scale(1.13);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 10;
+  background: #fff;
+  border-radius: 1rem;
 }

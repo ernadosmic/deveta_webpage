@@ -7,8 +7,14 @@ title: Početna
 <div class="hero-section">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active position-relative">
                 <img src="{{ '/assets/images/skola-1.webp' | relative_url }}" class="d-block w-100" alt="Deveta osnovna škola">
+                <!-- Quality Label Floating Image -->
+                <div class="position-absolute bottom-0 end-0 label-cont">
+                    <img src="{{ '/assets/images/qulity_label.png' | relative_url }}"
+                         alt="Quality Label"
+                         class="rounded-4 floating-label">
+                </div>
                 <div class="overlay"></div>
                 <div class="carousel-caption text-start h-100 d-flex flex-column justify-content-center">
                     <div class="container">

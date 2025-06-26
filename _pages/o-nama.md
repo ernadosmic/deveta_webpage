@@ -23,7 +23,7 @@ permalink: /o-nama/
             <div class="col-lg-8">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h3 class="card-title">Dobrodošli u Devetu osnovnu školu Maoča</h3>
+                        <h2 class="card-title">Dobrodošli u Devetu osnovnu školu Maoča</h2>
                         <p class="lead">Mi smo obrazovna ustanova predana izvrsnosti i osobnom razvoju svakog učenika.</p>
                         
                         <img src="{{ '/assets/images/skola-1.webp' | relative_url }}" alt="Deveta osnovna škola" class="img-fluid rounded mb-4">
@@ -43,22 +43,86 @@ permalink: /o-nama/
                             <li><strong>Zajedništvo</strong> - Stvaramo osjećaj pripadnosti i suradnje</li>
                         </ul>
                         
-                        <h4>Povijest škole</h4>
-                        <p>Deveta osnovna škola osnovana je 1965. godine kao obrazovna ustanova za učenike iz Maoče i okolnih naselja. Tijekom svoje povijesti, škola je kontinuirano radila na unapređenju kvalitete nastave i uvjeta za rad.</p>
-                        <p>Kroz godine, naši učenici su ostvarivali zapažene rezultate na raznim natjecanjima i pokazali se kao odgovorni članovi društvene zajednice.</p>
-                        
-                        <h4>Danas</h4>
-                        <p>Danas, Deveta osnovna škola broji oko 450 učenika i 35 nastavnika. Škola je opremljena suvremenim učionicama, informatičkim kabinetom, sportskom dvoranom i školskom bibliotekom. Provodimo brojne vannastavne aktivnosti i projekte koji omogućuju učenicima da istražuju svoje interese i talente.</p>
+                        <h3>Historijat Osnovne škole u Maoči</h3>
+
+                        <div class="row g-3 mb-4">
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="history-img-zoom">
+                              <img src="{{ '/assets/images/ljetopis/1.webp' | relative_url }}" alt="Historijska slika 1" class="img-fluid rounded shadow-sm">
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="history-img-zoom">
+                              <img src="{{ '/assets/images/ljetopis/2.webp' | relative_url }}" alt="Historijska slika 2" class="img-fluid rounded shadow-sm">
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="history-img-zoom">
+                              <img src="{{ '/assets/images/ljetopis/3.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="history-img-zoom">
+                              <img src="{{ '/assets/images/ljetopis/4.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="history-img-zoom">
+                              <img src="{{ '/assets/images/ljetopis/5.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="history-img-zoom">
+                              <img src="{{ '/assets/images/ljetopis/6.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="history-img-zoom">
+                              <img src="{{ '/assets/images/ljetopis/7.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
+                            </div>
+                          </div>
+                          <!-- Add more images as needed -->
+                        </div>
+
+                        <h4>Osnivanje i rani rad (1946–1949)</h4>
+                        <p>Osnovna škola u Maoči osnovana je 1946. godine pod nazivom Narodna osnovna škola Maoča. Školu su pohađali učenici sa područja Maoče i Islamovca. Nastava se odvijala u kombinovanim odjeljenjima sa učenicima različitog uzrasta.</p>
+
+                        <h4>Period četvororazredne škole (1949–1958)</h4>
+                        <p>Od 1949. godine škola prelazi u status četvororazredne škole i tako radi do 1958. godine, bez kombinovanih odjeljenja.</p>
+
+                        <h4>Širenje i razvoj (1958–1967)</h4>
+                        <p>Školske 1958/59. godine škola počinje da radi kao petorazredna, a tako funkcioniše sve do školske 1966/67. godine.
+                        U periodu od 1958. do 1963. godine javlja se potreba za izgradnjom nove školske zgrade. Radovi su započeli 1963. godine, a objekat je završen 1966. godine.</p>
+
+                        <h4>Škola "7. april" (1966–1973)</h4>
+                        <p>Sa novom infrastrukturom, škola u školskoj 1966/67. godini postaje šestorazredna i dobija novo ime: Osnovna škola "7. april" Maoča.
+                        Pod tim imenom djeluje sve do 7. marta 1973. godine.</p>
+
+                        <h4>Preimenovanje u čast Arifa Derviševića (1973–danas)</h4>
+                        <p>Dana 7. marta 1973. godine, škola mijenja ime u čast istaknutog borca i revolucionara Arifa Derviševića, i od tada djeluje kao Osnovna škola "Arif Dervišević" Maoča.</p>
+
+                        <p>Škola je 23. septembar, dan rođenja Arifa Derviševića, proglasila svojim školskim danom. Taj dan se svake godine obilježava kao sjećanje na ovog borca i njegova djela.</p>
+
+                        <h3>Uloga škole u zajednici</h3>
+                        <h4>Uticaj na lokalni razvoj</h4>
+                        <p>Od osnivanja do danas, škola je igrala značajnu ulogu u razvoju i preobražaju lokalne zajednice. Posebno je važan period kada škola prerasta u potpunu osmogodišnju školu, čime se pruža kvalitetnije obrazovanje sve većem broju djece.</p>
+
+                        <h4>Obrazovni rezultati (1973–1986)</h4>
+                        <p>U periodu od školske 1973/74. do 1985/86. godine školu je završilo oko 1.200 učenika.
+                        Većina njih nastavila je školovanje i završila srednje, više i visoke škole, što je značajno doprinijelo promjeni socijalne strukture stanovništva u ovom kraju.</p>
+
+                        <h4>Kulturni i društveni doprinos</h4>
+                        <p>Osim obrazovnih rezultata, škola je imala veliki značaj i u kulturnom i umjetničkom životu zajednice. Učestvovala je u obilježavanju važnih datuma i događaja, jačajući vezu između obrazovanja i lokalne istorije.</p>
                     </div>
                 </div>
-                
+
                 <!-- School Facts -->
                 <div class="row mb-4">
                     <div class="col-md-4 mb-3">
                         <div class="card h-100 text-center">
                             <div class="card-body">
                                 <i class="fas fa-user-graduate fa-3x text-primary mb-3"></i>
-                                <h5>200+</h5>
+                                <h5>400+</h5>
                                 <p class="mb-0">Učenika</p>
                             </div>
                         </div>
@@ -67,7 +131,7 @@ permalink: /o-nama/
                         <div class="card h-100 text-center">
                             <div class="card-body">
                                 <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
-                                <h5>35</h5>
+                                <h5>52</h5>
                                 <p class="mb-0">Nastavnika</p>
                             </div>
                         </div>
