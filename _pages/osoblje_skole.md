@@ -87,7 +87,7 @@ permalink: /osoblje_skole/
                         </div>
                         <div class="col-lg-4 col-md-6 mb-3">
                             <div class="staff-card p-3 border rounded">
-                                <h6 class="text-primary mb-1">Mediha Tursunović</h6>
+                                <h6 class="text-primary mb-1">Mediha Mujkanović</h6>
                                 <p class="mb-1"><strong>Socijalni pedagog</strong></p>
                                 <p class="text-muted small mb-0">Diplomirani socijalni pedagog</p>
                             </div>
@@ -220,7 +220,7 @@ permalink: /osoblje_skole/
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
                             <div class="staff-card p-3 border rounded">
                                 <h6 class="text-primary mb-1">Esma Banda</h6>
-                                <p class="text-muted small mb-0">Nastavnik razredne nastave</p>
+                                <p class="text-muted small mb-0">Profesor razredne nastave</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -388,7 +388,7 @@ permalink: /osoblje_skole/
                             <div class="staff-card p-3 border rounded">
                                 <h6 class="text-primary mb-1">Vahida Salihović</h6>
                                 <p class="mb-1"><strong>Geografija</strong></p>
-                                <p class="text-muted small mb-0">Profesor historije i geografije</p>
+                                <p class="text-muted small mb-0">Profesor geografije</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-3">
@@ -504,8 +504,8 @@ permalink: /osoblje_skole/
                         </div>
                         <div class="col-lg-4 col-md-6 mb-3">
                             <div class="staff-card p-3 border rounded">
-                                <h6 class="text-primary mb-1">Ajla Bikić</h6>
-                                <p class="text-muted small mb-0">Dipl.pedagog-psihlog</p>
+                                <h6 class="text-primary mb-1">Ajla Velagić</h6>
+                                <p class="text-muted small mb-0">Dipl. pedagog-psihlog</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-3">
