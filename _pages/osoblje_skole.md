@@ -38,7 +38,7 @@ permalink: /osoblje_skole/
                             <div class="staff-card p-3 border rounded">
                                 <h5 class="text-primary mb-1">Ernad Osmić</h5>
                                 <p class="mb-1"><strong>Pomoćnika direktora</strong></p>
-                                <p class="text-muted small mb-0">Magistar Bosanskog jezika i književnosti</p>
+                                <p class="text-muted small mb-0">Magistar bosanskog jezika i književnosti</p>
                             </div>
                         </div>
                     </div>
@@ -361,7 +361,7 @@ permalink: /osoblje_skole/
                             <div class="staff-card p-3 border rounded">
                                 <h6 class="text-primary mb-1">Veselinka Popić</h6>
                                 <p class="mb-1"><strong>Likovna kultura</strong></p>
-                                <p class="text-muted small mb-0">Lkovni umetnik</p>
+                                <p class="text-muted small mb-0">Profesor likovne kulture</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-3">
@@ -374,8 +374,8 @@ permalink: /osoblje_skole/
                         <div class="col-lg-4 col-md-6 mb-3">
                             <div class="staff-card p-3 border rounded">
                                 <h6 class="text-primary mb-1">Muamer Kukuljević</h6>
-                                <p class="mb-1"><strong>Likovna kultura</strong></p>
-                                <p class="text-muted small mb-0">Prof. Likovne kulture</p>
+                                <p class="mb-1"><strong>Životne vještine i stavovi</strong></p>
+                                <p class="text-muted small mb-0">Profesor likovne kulture</p>
                             </div>
                         </div>
                     </div>
@@ -395,14 +395,14 @@ permalink: /osoblje_skole/
                             <div class="staff-card p-3 border rounded">
                                 <h6 class="text-primary mb-1">Ajša Hercegovac</h6>
                                 <p class="mb-1"><strong>Geografija</strong></p>
-                                <p class="text-muted small mb-0">Nastavnik geografije</p>
+                                <p class="text-muted small mb-0">Profesor historije i geografije</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-3">
                             <div class="staff-card p-3 border rounded">
                                 <h6 class="text-primary mb-1">Adisa Kešetović</h6>
                                 <p class="mb-1"><strong>Historija</strong></p>
-                                <p class="text-muted small mb-0">Profesor historije</p>
+                                <p class="text-muted small mb-0">Profesor historije i geografije</p>
                             </div>
                         </div>
                     </div>
@@ -499,7 +499,7 @@ permalink: /osoblje_skole/
                         <div class="col-lg-4 col-md-6 mb-3">
                             <div class="staff-card p-3 border rounded">
                                 <h6 class="text-primary mb-1">Almedina Ibrišimović</h6>
-                                <p class="text-muted small mb-0">Prof. Razredne nastave</p>
+                                <p class="text-muted small mb-0">Profesor razredne nastave</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-3">
