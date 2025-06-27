@@ -777,3 +777,71 @@ textarea:focus {
 .img-modal:focus {
   outline: none;
 }
+
+/*------------------------------------*\
+  #STAFF-CARDS
+\*------------------------------------*/
+.staff-card {
+  transition: all 0.3s ease;
+  background: #fff;
+  border: 1px solid #e9ecef !important;
+  height: 100%;
+  position: relative;
+}
+
+.staff-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(46, 92, 184, 0.15) !important;
+  border-color: var(--primary-light) !important;
+}
+
+.staff-card h5,
+.staff-card h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.staff-card .text-primary {
+  color: var(--primary-color) !important;
+}
+
+.staff-card .text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.staff-card .text-muted {
+  color: #6c757d !important;
+  font-size: 0.875rem;
+}
+
+.staff-card p {
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.staff-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments for staff cards */
+@media (max-width: 768px) {
+  .staff-card {
+    margin-bottom: 1rem;
+  }
+
+  .staff-card h5,
+  .staff-card h6 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .staff-card h5,
+  .staff-card h6 {
+    font-size: 0.95rem;
+  }
+
+  .staff-card .text-muted {
+    font-size: 0.8rem;
+  }
+}
