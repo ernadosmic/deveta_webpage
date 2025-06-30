@@ -4,238 +4,406 @@ title: O nama
 permalink: /o-nama/
 ---
 
-<!-- Page Banner -->
-<div class="page-banner bg-primary py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="text-white mb-0">O našoj školi</h2>
+<!-- Hero Section -->
+<div class="about-hero bg-primary position-relative overflow-hidden">
+    <div class="hero-pattern"></div>
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content text-white">
+                    <h1 class="display-4 fw-bold mb-4">Deveta osnovna škola Maoča</h1>
+                    <p class="lead mb-4">Tradicija, kvalitet i izvrsnost u obrazovanju već više od 75 godina</p>
+                    <div class="hero-stats d-flex gap-4 mb-4">
+                        <div class="stat-item">
+                            <div class="stat-number">400+</div>
+                            <div class="stat-label">Učenika</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">52</div>
+                            <div class="stat-label">Nastavnika</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">75+</div>
+                            <div class="stat-label">Godina tradicije</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#historia" class="btn btn-light btn-lg me-3">
+                            <i class="fas fa-history me-2"></i>Naša historija
+                        </a>
+                        <a href="{{ '/sekcije' | relative_url }}" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-users me-2"></i>Pridružite se
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <img src="{{ '/assets/images/skola-1.webp' | relative_url }}" alt="Deveta osnovna škola" class="img-fluid rounded-lg shadow-lg">
+                    <div class="image-overlay"></div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- About Content -->
-<div class="main-content py-5">
+<!-- Mission & Vision Section -->
+<div class="mission-vision py-5 bg-light">
     <div class="container">
         <div class="row">
-            <!-- Main Content Area -->
-            <div class="col-lg-8">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h2 class="card-title">Dobrodošli u Devetu osnovnu školu Maoča</h2>
-                        <p class="lead">Mi smo obrazovna ustanova predana izvrsnosti i osobnom razvoju svakog učenika.</p>
-                        
-                        <img src="{{ '/assets/images/skola-1.webp' | relative_url }}" alt="Deveta osnovna škola" class="img-fluid rounded mb-4">
-                        
-                        <h4>Naša misija</h4>
-                        <p>Naša misija je pružiti kvalitetno obrazovanje koje će svim učenicima omogućiti da razviju svoje potencijale, kritičko razmišljanje i kreativnost. Stvaramo poticajno okruženje u kojem svaki učenik može postići akademski uspjeh i osobni razvoj.</p>
-                        
-                        <h4>Naša vizija</h4>
-                        <p>Naša vizija je biti prepoznata kao škola izvrsnosti koja priprema učenike za izazove budućnosti i potiče cjeloživotno učenje. Težimo stvaranju školske zajednice gdje se potiče međusobno poštovanje, odgovornost i entuzijazam za učenjem.</p>
-                        
-                        <h4>Naše vrijednosti</h4>
-                        <ul>
-                            <li><strong>Izvrsnost</strong> - Potičemo visoke standarde u svim aspektima školskog života</li>
-                            <li><strong>Poštovanje</strong> - Njegujemo međusobno poštovanje i uvažavanje različitosti</li>
-                            <li><strong>Odgovornost</strong> - Promičemo osobnu i društvenu odgovornost</li>
-                            <li><strong>Kreativnost</strong> - Potičemo inovativno razmišljanje i kreativno izražavanje</li>
-                            <li><strong>Zajedništvo</strong> - Stvaramo osjećaj pripadnosti i suradnje</li>
-                        </ul>
-                        
-                        <h3>Historijat Osnovne škole u Maoči</h3>
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Naša misija i vizija</h2>
+                <p class="section-subtitle">Gradimo budućnost kroz obrazovanje</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="mission-card h-100">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Naša misija</h3>
+                    <p>Naša misija je pružiti kvalitetno obrazovanje koje će svim učenicima omogućiti da razviju svoje potencijale, kritičko razmišljanje i kreativnost. Stvaramo poticajno okruženje u kojem svaki učenik može postići akademski uspjeh i osobni razvoj.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="vision-card h-100">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Naša vizija</h3>
+                    <p>Naša vizija je biti prepoznata kao škola izvrsnosti koja priprema učenike za izazove budućnosti i potiče cjeloživotno učenje. Težimo stvaranju školske zajednice gdje se potiče međusobno poštovanje, odgovornost i entuzijazam za učenjem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                        <div class="row g-3 mb-4">
-                          <div class="col-6 col-md-4 col-lg-3">
-                            <div class="history-img-zoom">
-                              <img src="{{ '/assets/images/ljetopis/1.webp' | relative_url }}" alt="Historijska slika 1" class="img-fluid rounded shadow-sm">
-                            </div>
-                          </div>
-                          <div class="col-6 col-md-4 col-lg-3">
-                            <div class="history-img-zoom">
-                              <img src="{{ '/assets/images/ljetopis/2.webp' | relative_url }}" alt="Historijska slika 2" class="img-fluid rounded shadow-sm">
-                            </div>
-                          </div>
-                          <div class="col-6 col-md-4 col-lg-3">
-                            <div class="history-img-zoom">
-                              <img src="{{ '/assets/images/ljetopis/3.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
-                            </div>
-                          </div>
-                          <div class="col-6 col-md-4 col-lg-3">
-                            <div class="history-img-zoom">
-                              <img src="{{ '/assets/images/ljetopis/4.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
-                            </div>
-                          </div>
-                          <div class="col-6 col-md-4 col-lg-3">
-                            <div class="history-img-zoom">
-                              <img src="{{ '/assets/images/ljetopis/5.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
-                            </div>
-                          </div>
-                          <div class="col-6 col-md-4 col-lg-3">
-                            <div class="history-img-zoom">
-                              <img src="{{ '/assets/images/ljetopis/6.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
-                            </div>
-                          </div>
-                          <div class="col-6 col-md-4 col-lg-3">
-                            <div class="history-img-zoom">
-                              <img src="{{ '/assets/images/ljetopis/7.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
-                            </div>
-                          </div>
-                          <!-- Add more images as needed -->
+<!-- Values Section -->
+<div class="values-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Naše vrijednosti</h2>
+                <p class="section-subtitle">Principi koji nas vode</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card text-center h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Izvrsnost</h4>
+                    <p>Potičemo visoke standarde u svim aspektima školskog života</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card text-center h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Poštovanje</h4>
+                    <p>Njegujemo međusobno poštovanje i uvažavanje različitosti</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card text-center h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Odgovornost</h4>
+                    <p>Promičemo osobnu i društvenu odgovornost</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card text-center h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Kreativnost</h4>
+                    <p>Potičemo inovativno razmišljanje i kreativno izražavanje</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card text-center h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Zajedništvo</h4>
+                    <p>Stvaramo osjećaj pripadnosti i suradnje</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card text-center h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Učenje</h4>
+                    <p>Promovišemo cjeloživotno učenje i razvoj</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- History Section -->
+<div id="historia" class="history-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Historijat naše škole</h2>
+                <p class="section-subtitle">Putovanje kroz vrijeme - od 1946. do danas</p>
+            </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="photo-gallery mb-5">
+            <h3 class="text-center mb-4">Galerija uspomena</h3>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item">
+                        <img src="{{ '/assets/images/ljetopis/1.webp' | relative_url }}" alt="Historijska slika 1" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
                         </div>
-
-                        <h4>Osnivanje i rani rad (1946–1949)</h4>
-                        <p>Osnovna škola u Maoči osnovana je 1946. godine pod nazivom Narodna osnovna škola Maoča. Školu su pohađali učenici sa područja Maoče i Islamovca. Nastava se odvijala u kombinovanim odjeljenjima sa učenicima različitog uzrasta.</p>
-
-                        <h4>Period četvororazredne škole (1949–1958)</h4>
-                        <p>Od 1949. godine škola prelazi u status četvororazredne škole i tako radi do 1958. godine, bez kombinovanih odjeljenja.</p>
-
-                        <h4>Širenje i razvoj (1958–1967)</h4>
-                        <p>Školske 1958/59. godine škola počinje da radi kao petorazredna, a tako funkcioniše sve do školske 1966/67. godine.
-                        U periodu od 1958. do 1963. godine javlja se potreba za izgradnjom nove školske zgrade. Radovi su započeli 1963. godine, a objekat je završen 1966. godine.</p>
-
-                        <h4>Škola "7. april" (1966–1973)</h4>
-                        <p>Sa novom infrastrukturom, škola u školskoj 1966/67. godini postaje šestorazredna i dobija novo ime: Osnovna škola "7. april" Maoča.
-                        Pod tim imenom djeluje sve do 7. marta 1973. godine.</p>
-
-                        <h4>Preimenovanje u čast Arifa Derviševića (1973–danas)</h4>
-                        <p>Dana 7. marta 1973. godine, škola mijenja ime u čast istaknutog borca i revolucionara Arifa Derviševića, i od tada djeluje kao Osnovna škola "Arif Dervišević" Maoča.</p>
-
-                        <p>Škola je 23. septembar, dan rođenja Arifa Derviševića, proglasila svojim školskim danom. Taj dan se svake godine obilježava kao sjećanje na ovog borca i njegova djela.</p>
-
-                        <h3>Uloga škole u zajednici</h3>
-                        <h4>Uticaj na lokalni razvoj</h4>
-                        <p>Od osnivanja do danas, škola je igrala značajnu ulogu u razvoju i preobražaju lokalne zajednice. Posebno je važan period kada škola prerasta u potpunu osmogodišnju školu, čime se pruža kvalitetnije obrazovanje sve većem broju djece.</p>
-
-                        <h4>Obrazovni rezultati (1973–1986)</h4>
-                        <p>U periodu od školske 1973/74. do 1985/86. godine školu je završilo oko 1.200 učenika.
-                        Većina njih nastavila je školovanje i završila srednje, više i visoke škole, što je značajno doprinijelo promjeni socijalne strukture stanovništva u ovom kraju.</p>
-
-                        <h4>Kulturni i društveni doprinos</h4>
-                        <p>Osim obrazovnih rezultata, škola je imala veliki značaj i u kulturnom i umjetničkom životu zajednice. Učestvovala je u obilježavanju važnih datuma i događaja, jačajući vezu između obrazovanja i lokalne istorije.</p>
                     </div>
                 </div>
-
-                <!-- School Facts -->
-                <div class="row mb-4">
-                    <div class="col-md-4 mb-3">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <i class="fas fa-user-graduate fa-3x text-primary mb-3"></i>
-                                <h5>400+</h5>
-                                <p class="mb-0">Učenika</p>
-                            </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item">
+                        <img src="{{ '/assets/images/ljetopis/2.webp' | relative_url }}" alt="Historijska slika 2" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
-                                <h5>52</h5>
-                                <p class="mb-0">Nastavnika</p>
-                            </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item">
+                        <img src="{{ '/assets/images/ljetopis/3.webp' | relative_url }}" alt="Historijska slika 3" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <i class="fas fa-book-open fa-3x text-primary mb-3"></i>
-                                <h5>60+</h5>
-                                <p class="mb-0">Godina tradicije</p>
-                            </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item">
+                        <img src="{{ '/assets/images/ljetopis/4.webp' | relative_url }}" alt="Historijska slika 4" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item">
+                        <img src="{{ '/assets/images/ljetopis/5.webp' | relative_url }}" alt="Historijska slika 5" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item">
+                        <img src="{{ '/assets/images/ljetopis/6.webp' | relative_url }}" alt="Historijska slika 6" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item">
+                        <img src="{{ '/assets/images/ljetopis/7.webp' | relative_url }}" alt="Historijska slika 7" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <!-- School Info Card -->
-                <div class="card mb-4">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Kontakt informacije</h5>
-                    </div>
-                    <div class="card-body">
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Adresa: Maoča bb, 76208 Maoča</p>
-                        <p><i class="fas fa-phone-alt me-2"></i>Telefon: {{ site.phone }}</p>
-                        <p><i class="fas fa-envelope me-2"></i>Email: {{ site.email }}</p>
-                        <p><i class="fas fa-clock me-2"></i>Radno vrijeme: Ponedjeljak - Petak 7:30 - 15:30</p>
-
-                        <div class="d-grid mt-3">
-                            <a href="{{ '/kontakt' | relative_url }}" class="btn btn-primary">Kontaktirajte nas</a>
-                        </div>
+        <!-- Timeline -->
+        <div class="timeline-section">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1946</div>
+                    <div class="timeline-content">
+                        <h4>Osnivanje škole</h4>
+                        <p>Osnovna škola u Maoči osnovana je 1946. godine pod nazivom Narodna osnovna škola Maoča. Školu su pohađali učenici sa područja Maoče i Islamovca.</p>
                     </div>
                 </div>
 
-                <!-- School Leadership -->
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h5 class="mb-0">Uprava škole</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                                <div class="icon-wrapper me-3">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h6 class="mb-0">Almir Bećić</h6>
-                                <p class="small text-muted mb-0">Direktor</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                                <div class="icon-wrapper me-3">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h6 class="mb-0">Ernad Osmić</h6>
-                                <p class="small text-muted mb-0">Pomoćnik direktora</p>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <div class="icon-wrapper me-3">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h6 class="mb-0">Eldin Zahirović</h6>
-                                <p class="small text-muted mb-0">Pedagog</p>
-                            </div>
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">1949</div>
+                    <div class="timeline-content">
+                        <h4>Četvororazredna škola</h4>
+                        <p>Od 1949. godine škola prelazi u status četvororazredne škole i tako radi do 1958. godine, bez kombinovanih odjeljenja.</p>
                     </div>
                 </div>
 
-                <!-- Downloads -->
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h5 class="mb-0">Korisni dokumenti</h5>
+                <div class="timeline-item">
+                    <div class="timeline-marker">1958</div>
+                    <div class="timeline-content">
+                        <h4>Širenje i razvoj</h4>
+                        <p>Školske 1958/59. godine škola počinje da radi kao petorazredna, a tako funkcioniše sve do školske 1966/67. godine.</p>
                     </div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <a href="{{ '/dokumenti' | relative_url }}" class="text-decoration-none">
-                                    <i class="far fa-file-pdf me-2 text-danger"></i>Školski pravilnik
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{{ '/dokumenti' | relative_url }}" class="text-decoration-none">
-                                    <i class="far fa-file-alt me-2 text-primary"></i>Godišnji plan rada škole
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{{ '/dokumenti' | relative_url }}" class="text-decoration-none">
-                                    <i class="far fa-file-alt me-2 text-primary"></i>Raspored sati
-                                </a>
-                            </li>
-                        </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">1966</div>
+                    <div class="timeline-content">
+                        <h4>Nova zgrada i ime "7. april"</h4>
+                        <p>Sa novom infrastrukturom, škola postaje šestorazredna i dobija novo ime: Osnovna škola "7. april" Maoča.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">1973</div>
+                    <div class="timeline-content">
+                        <h4>Preimenovanje u čast Arifa Derviševića</h4>
+                        <p>Dana 7. marta 1973. godine, škola mijenja ime u čast istaknutog borca i revolucionara Arifa Derviševića.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">Danas</div>
+                    <div class="timeline-content">
+                        <h4>Moderna škola</h4>
+                        <p>Danas naša škola nastavlja svoju misiju pružanja kvalitetnog obrazovanja sa više od 400 učenika i 52 nastavnika.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+</div>
+
+<!-- Leadership Section -->
+<div class="leadership-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Rukovodstvo škole</h2>
+                <p class="section-subtitle">Naši lideri u obrazovanju</p>
+            </div>
+        </div>
+        <div class="row justify-content-center g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="leader-card text-center">
+                    <div class="leader-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Almir Bećić</h4>
+                    <p class="leader-title">Direktor škole</p>
+                    <p class="leader-qualification">Profesor historije</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="leader-card text-center">
+                    <div class="leader-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Ernad Osmić</h4>
+                    <p class="leader-title">Pomoćnik direktora</p>
+                    <p class="leader-qualification">Magistar bosanskog jezika i književnosti</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="leader-card text-center">
+                    <div class="leader-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Eldin Zahirović</h4>
+                    <p class="leader-title">Pedagog škole</p>
+                    <p class="leader-qualification">Diplomirani pedagog-psiholog</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact & Info Section -->
+<div class="contact-info-section py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="contact-card h-100">
+                    <h3>Kontakt informacije</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Adresa</strong>
+                                <p>Maoča bb, 76208 Maoča</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Telefon</strong>
+                                <p>{{ site.phone }}</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>{{ site.email }}</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Radno vrijeme</strong>
+                                <p>Ponedjeljak - Petak 7:30 - 15:30</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-buttons mt-4">
+                        <a href="mailto:{{ site.email }}" class="btn btn-primary me-3">
+                            <i class="fas fa-envelope me-2"></i>Pošaljite email
+                        </a>
+                        <a href="{{ '/sekcije' | relative_url }}" class="btn btn-outline-primary">
+                            <i class="fas fa-users me-2"></i>Pridružite se
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="documents-card h-100">
+                    <h3>Korisni dokumenti</h3>
+                    <div class="document-list">
+                        <a href="{{ '/dokumenti' | relative_url }}" class="document-item">
+                            <div class="document-icon">
+                                <i class="far fa-file-pdf"></i>
+                            </div>
+                            <div>
+                                <strong>Školski pravilnik</strong>
+                                <p>Pravila i propisi naše škole</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                        <a href="{{ '/dokumenti' | relative_url }}" class="document-item">
+                            <div class="document-icon">
+                                <i class="far fa-file-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Godišnji plan rada</strong>
+                                <p>Plan aktivnosti za školsku godinu</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                        <a href="{{ '/raspored' | relative_url }}" class="document-item">
+                            <div class="document-icon">
+                                <i class="far fa-calendar"></i>
+                            </div>
+                            <div>
+                                <strong>Raspored sati</strong>
+                                <p>Trenutni raspored časova</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
