@@ -60,6 +60,10 @@
                             href="{{ '/o-nama' | relative_url }}">O Nama</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {% if page.url contains 'sekcije' %}active{% endif %}"
+                            href="{{ '/sekcije' | relative_url }}">Sekcije</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {% if page.url contains 'osoblje_skole' %}active{% endif %}"
                             href="{{ '/osoblje_skole' | relative_url }}">Osoblje škole</a>
                     </li>

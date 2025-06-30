@@ -845,3 +845,270 @@ textarea:focus {
     font-size: 0.8rem;
   }
 }
+
+/*------------------------------------*\
+  #ACTIVITIES-PAGE
+\*------------------------------------*/
+
+/* Filter Buttons */
+.filter-buttons .filter-btn {
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+.filter-buttons .filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 92, 184, 0.2);
+}
+
+.filter-buttons .filter-btn.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 92, 184, 0.3);
+}
+
+/* Activity Cards */
+.activity-card {
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.activity-item {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: white;
+}
+
+.activity-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.activity-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s;
+}
+
+.activity-item:hover .activity-header::before {
+  left: 100%;
+}
+
+.activity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover .activity-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.activity-body {
+  position: relative;
+}
+
+.detail-item {
+  font-size: 0.9rem;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.join-btn {
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+}
+
+.cta-section h3 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Modal Enhancements */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  color: white;
+  border-radius: 15px 15px 0 0;
+  border-bottom: none;
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(46, 92, 184, 0.1);
+}
+
+/* Rounded corners */
+.rounded-lg {
+  border-radius: 15px !important;
+}
+
+/* Category specific colors */
+.activity-card[data-category="sport"] .activity-header {
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+}
+
+.activity-card[data-category="art"] .activity-header {
+  background: linear-gradient(135deg, #ffc107, #fd7e14) !important;
+}
+
+.activity-card[data-category="tech"] .activity-header {
+  background: linear-gradient(135deg, #17a2b8, #6f42c1) !important;
+}
+
+.activity-card[data-category="language"] .activity-header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  ) !important;
+}
+
+.activity-card[data-category="science"] .activity-header {
+  background: linear-gradient(135deg, #6c757d, #495057) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-buttons {
+    gap: 0.5rem !important;
+  }
+
+  .filter-btn {
+    font-size: 0.875rem;
+    padding: 6px 15px;
+  }
+
+  .activity-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .activity-icon i {
+    font-size: 1.5rem !important;
+  }
+
+  .activity-header h5 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.activity-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.activity-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.activity-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.activity-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.activity-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.activity-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.activity-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.activity-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.activity-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.activity-card:nth-child(9) {
+  animation-delay: 0.9s;
+}
