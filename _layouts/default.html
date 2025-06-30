@@ -17,19 +17,6 @@
     {% endfor %}
     {% endif %}
 </head>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-            if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                });
-            }
-        });
-        window.netlifyIdentity.init();
-    }
-</script>
 
 <body>
     {% include header.html %}
@@ -47,6 +34,25 @@
     <script src="{{ js_file | relative_url }}"></script>
     {% endfor %}
     {% endif %}
+
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        // Initialize Netlify Identity after DOM is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+                window.netlifyIdentity.init();
+            }
+        });
+    </script>
+
     <div id="imgModal" class="img-modal" tabindex="-1" style="display:none;">
         <span class="img-modal-close" id="imgModalClose">&times;</span>
         <img class="img-modal-content" id="imgModalImg" alt="">
