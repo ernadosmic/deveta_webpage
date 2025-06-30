@@ -266,7 +266,7 @@ permalink: /sekcije/
                         </div>
                         <div class="detail-item mb-3">
                             <i class="fas fa-user text-muted me-2"></i>
-                            <span>Nastavnik: Mirza Šibonjić</span>
+                            <span>Nastavnik: Nijad Salihović</span>
                         </div>
                     </div>
                     <button class="btn btn-info btn-sm w-100 join-btn" data-activity="robotika">
